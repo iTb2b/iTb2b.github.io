@@ -2,13 +2,97 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://onkno.github.io</id>
     <title>Tao Cheung</title>
-    <updated>2020-03-26T11:12:24.557Z</updated>
+    <updated>2020-03-27T10:40:23.740Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://onkno.github.io"/>
     <link rel="self" href="https://onkno.github.io/atom.xml"/>
     <logo>https://onkno.github.io/images/avatar.png</logo>
     <icon>https://onkno.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, Tao Cheung</rights>
+    <entry>
+        <title type="html"><![CDATA[Homebrew 踩坑]]></title>
+        <id>https://onkno.github.io/post/homebrew-cai-keng/</id>
+        <link href="https://onkno.github.io/post/homebrew-cai-keng/">
+        </link>
+        <updated>2020-03-27T10:22:35.000Z</updated>
+        <content type="html"><![CDATA[<ul>
+<li>
+<p>介绍</p>
+</li>
+<li>
+<p>安装</p>
+</li>
+<li>
+<p>卸载</p>
+</li>
+<li>
+<p>注意</p>
+</li>
+<li>
+<p>工作流程</p>
+</li>
+<li>
+<p>后记</p>
+<hr>
+<h2 id="介绍">介绍</h2>
+<p>Homebrew是macOS 下一款多功能的包管理工具，还能安装各种应用程序，方便管理</p>
+<p>如pycharm，python，甚至是qq和微信</p>
+<p><a href="https://brew.sh">Homebrew官网</a></p>
+<img src="https://tva1.sinaimg.cn/large/00831rSTly1gd8imyw3swj316i0sxtgf.jpg" alt="截屏2020-03-27下午3.25.27" style="zoom: 33%;" />
+<p>在安装之前，我还寻思着为什么网上这么多避免“踩坑”的文章，不就是装个软件吗</p>
+<p>现在想来，我真是太naive了😭</p>
+<h2 id="安装">安装</h2>
+<pre><code class="language-terminal">/bin/bash -c &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)&quot;
+</code></pre>
+<img src="https://tva1.sinaimg.cn/large/00831rSTly1gd8isqvnlkj30ka0dzq6c.jpg" alt="截屏2020-03-27下午3.31.40" style="zoom: 67%;" />
+<p>这样……当然是不行的！中国可是全球最大的局域网，怎么可能就这么简单安装上了</p>
+<p>事实上，如果按照官网给出的命令直接回车，下载速度是个位数，还时不时连接不上</p>
+<p>这就是第一个坑了，怎么才能下载得快</p>
+<p>经过网络的搜索，大致两个办法</p>
+<ul>
+<li>
+<p>端口代理</p>
+<p>我采取了这个办法，并且成功了，下载速度有时在1M/s以上</p>
+<p>首先输入</p>
+<p><code>export http_proxy=http://127.0.0.1:1087;export https_proxy=http://127.0.0.1:1087;</code></p>
+<p>1087是本地代理端口号</p>
+<p>无误后再按照官网输入安装命令</p>
+</li>
+</ul>
+<img src="https://tva1.sinaimg.cn/large/00831rSTly1gd8lr5daorj30jd0d9goh.jpg" alt="截屏2020-03-27下午5.13.57" style="zoom:80%;" />
+<ul>
+<li>
+<p>换源</p>
+<p>虽然没有用到这个办法，但是为了以防万一，还是记录下来</p>
+<p><code>curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install &gt;&gt; Temp_Brew</code>  这个命令是把临时下载文件导出来</p>
+<p><code>open Temp_Brew</code> 打开文件</p>
+<p><code>BREW_REPO = &quot;https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/brew.git&quot;.freeze</code> 修改为清华源</p>
+<blockquote>
+<p>备用其他源，好像中科大用的人较多</p>
+<p>阿里源：https://mirrors.aliyun.com/homebrew/brew.git<br>
+USTC（中科大镜像）：https://mirrors.ustc.edu.cn/brew.git</p>
+</blockquote>
+<p><code>/usr/bin/ruby Temp_Brew</code> 保存后输入这一行代码，然后按提示即可</p>
+</li>
+</ul>
+<p>感谢b站up主<a href="https://www.mintimate.cn/2019/06/26/Mac%E6%9D%82%E5%9D%9B/">Mintimate</a></p>
+<img src="https://tva1.sinaimg.cn/large/00831rSTly1gd8mb7xbp2j30lw0f7mzz.jpg" alt="截屏2020-03-27下午5.33.11" style="zoom:80%;" />
+<h2 id="卸载">卸载</h2>
+<p><code>/usr/bin/ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/uninstall)&quot;</code></p>
+<h2 id="注意">注意</h2>
+<ol>
+<li></li>
+</ol>
+<p><code>Failed to connect to raw.githubusercontent.com port 443: Connection refused error:</code>  <s>重新打开一个terminal即可</s> 建议直接设置端口，这种情况一般是被墙了</p>
+<h2 id="工作流程">工作流程</h2>
+<img src="https://tva1.sinaimg.cn/large/00831rSTly1gd8md42fp3j30zb0oy42o.jpg" alt="截屏2020-03-27下午5.34.14" style="zoom:80%;" />
+<h2 id="后记">后记</h2>
+<p>意外发现cotilina自带了python3，那就不安装了，省的还要设置path</p>
+<p>然后一直在那个设置了端口的终端跑命令，很快就下载完了pycharm-edu，一切都好用</p>
+</li>
+</ul>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[macOS初体验]]></title>
         <id>https://onkno.github.io/post/macos-chu-ti-yan/</id>

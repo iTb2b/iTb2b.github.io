@@ -162,7 +162,7 @@
                     <article class="post-wrap">
                         <header class="post-header">
                             <h1 class="post-title">
-                                macOS初体验
+                                Homebrew 踩坑
                             </h1>
                             <!--en-->
                             <div class="post-meta en">
@@ -171,13 +171,15 @@
                                     Tao Cheung
                                 </a>
                                 <span class="post-time">
-                                Date: <a href="#">2020-03-26</a>
+                                Date: <a href="#">2020-03-27</a>
                             </span>
-                                <span class="post-readtime">Reading Time:<a href="#">1.3 mins</a></span>
-                                <span class="post-words">words:<a href="#">367</a></span>
+                                <span class="post-readtime">Reading Time:<a href="#">2.2 mins</a></span>
+                                <span class="post-words">words:<a href="#">547</a></span>
                                 
                                     <span class="post-category">
                                 Category:
+                                
+                                <a href="https://onkno.github.io/tag/LgTceiTTi/">技术</a>
                                 
                                 <a href="https://onkno.github.io/tag/c9I3hpcpM/">肉体和思想总要有一个在路上</a>
                                 
@@ -190,11 +192,13 @@
                                 <a itemprop="author" rel="author" href="/">
                                     Tao Cheung
                                 </a>
-                                <span class="post-time">&#x65E5;&#x671F;: <a href="#">2020-03-26</a></span>
-                                <span class="post-readtime">&#x9605;&#x8BFB;&#x65F6;&#x95F4;:<a href="#">1.3 &#x5206;&#x949F;</a></span>
-                                <span class="post-words">&#x5B57;&#x6570;:<a href="#">367</a></span>
+                                <span class="post-time">&#x65E5;&#x671F;: <a href="#">2020-03-27</a></span>
+                                <span class="post-readtime">&#x9605;&#x8BFB;&#x65F6;&#x95F4;:<a href="#">2.2 &#x5206;&#x949F;</a></span>
+                                <span class="post-words">&#x5B57;&#x6570;:<a href="#">547</a></span>
                                 
                                     <span class="post-category">&#x5206;&#x7C7B;:
+                                
+                                <a href="https://onkno.github.io/tag/LgTceiTTi/">技术</a>
                                 
                                 <a href="https://onkno.github.io/tag/c9I3hpcpM/">肉体和思想总要有一个在路上</a>
                                 
@@ -203,30 +207,98 @@
                             </div>
                         </header>
                         <div class="post-content">
-                            <p>抛去安装过程不谈（淘宝真香），macOS真是惊艳到我了</p>
-<p>之前在少数派看到了一篇文章，<a href="https://sspai.com/post/58805">Unix设计哲学</a></p>
-<p>其中的“文件概念”于我来说真是如救命稻草一般</p>
-<p>我一直深受win的文件管理的毒害，无论怎么整理文件，到最后一定会变得一团糟</p>
-<p>尤其是注册表，库之类的东西，删又删不干净</p>
-<p>从小学起家里就有了电脑，当时就喜欢编程，再之后，有了苹果手机</p>
-<p>那时起苹果的设计与交互方式就在潜移默化地影响着我</p>
-<p>如今“<strong>极简</strong>”已经成为了我选择东西与行事方案的一条重要法则，说是生活态度也不为过</p>
-<p>“<em>Give you what you want</em>”</p>
-<p>一个程序你该干啥就干啥，别想整其他幺蛾子</p>
+                            <ul>
+<li>
+<p>介绍</p>
+</li>
+<li>
+<p>安装</p>
+</li>
+<li>
+<p>卸载</p>
+</li>
+<li>
+<p>注意</p>
+</li>
+<li>
+<p>工作流程</p>
+</li>
+<li>
+<p>后记</p>
+<hr>
+<h2 id="介绍">介绍</h2>
+<p>Homebrew是macOS 下一款多功能的包管理工具，还能安装各种应用程序，方便管理</p>
+<p>如pycharm，python，甚至是qq和微信</p>
+<p><a href="https://brew.sh">Homebrew官网</a></p>
+<img src="https://tva1.sinaimg.cn/large/00831rSTly1gd8imyw3swj316i0sxtgf.jpg" alt="截屏2020-03-27下午3.25.27" style="zoom: 33%;" />
+<p>在安装之前，我还寻思着为什么网上这么多避免“踩坑”的文章，不就是装个软件吗</p>
+<p>现在想来，我真是太naive了😭</p>
+<h2 id="安装">安装</h2>
+<pre><code class="language-terminal">/bin/bash -c &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)&quot;
+</code></pre>
+<img src="https://tva1.sinaimg.cn/large/00831rSTly1gd8isqvnlkj30ka0dzq6c.jpg" alt="截屏2020-03-27下午3.31.40" style="zoom: 67%;" />
+<p>这样……当然是不行的！中国可是全球最大的局域网，怎么可能就这么简单安装上了</p>
+<p>事实上，如果按照官网给出的命令直接回车，下载速度是个位数，还时不时连接不上</p>
+<p>这就是第一个坑了，怎么才能下载得快</p>
+<p>经过网络的搜索，大致两个办法</p>
+<ul>
+<li>
+<p>端口代理</p>
+<p>我采取了这个办法，并且成功了，下载速度有时在1M/s以上</p>
+<p>首先输入</p>
+<p><code>export http_proxy=http://127.0.0.1:1087;export https_proxy=http://127.0.0.1:1087;</code></p>
+<p>1087是本地代理端口号</p>
+<p>无误后再按照官网输入安装命令</p>
+</li>
+</ul>
+<img src="https://tva1.sinaimg.cn/large/00831rSTly1gd8lr5daorj30jd0d9goh.jpg" alt="截屏2020-03-27下午5.13.57" style="zoom:80%;" />
+<ul>
+<li>
+<p>换源</p>
+<p>虽然没有用到这个办法，但是为了以防万一，还是记录下来</p>
+<p><code>curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install &gt;&gt; Temp_Brew</code>  这个命令是把临时下载文件导出来</p>
+<p><code>open Temp_Brew</code> 打开文件</p>
+<p><code>BREW_REPO = &quot;https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/brew.git&quot;.freeze</code> 修改为清华源</p>
 <blockquote>
-<p>“中国的软件，始于创意，盛于设计，死于社交（约炮）”——我说的</p>
+<p>备用其他源，好像中科大用的人较多</p>
+<p>阿里源：https://mirrors.aliyun.com/homebrew/brew.git<br>
+USTC（中科大镜像）：https://mirrors.ustc.edu.cn/brew.git</p>
 </blockquote>
-<p>前几日运用“things 3” + “Forest” + &quot;Marginnote 3&quot; 的工作流程来学习，效率有很大很大的提高</p>
-<p>别的不说，这三个应用的UI才是符合我的审美水平的</p>
-<img src="https://tva1.sinaimg.cn/large/00831rSTly1gd7i22obuvj30zb0oyjv7.jpg" alt="截屏2020-03-26下午6.10.30" style="zoom: 50%;" />
-<p>包括我现在写这篇文章，上传的图片都是在macOS下进行的<br>
-<strong>typora</strong>+<strong>ipic</strong><br>
-简单的几个按键就完成了图片上传和插入的过程，甚至在调教好后，把图片拖进来就能直接上传图片<br>
-简单、快速、高效！</p>
+<p><code>/usr/bin/ruby Temp_Brew</code> 保存后输入这一行代码，然后按提示即可</p>
+</li>
+</ul>
+<p>感谢b站up主<a href="https://www.mintimate.cn/2019/06/26/Mac%E6%9D%82%E5%9D%9B/">Mintimate</a></p>
+<img src="https://tva1.sinaimg.cn/large/00831rSTly1gd8mb7xbp2j30lw0f7mzz.jpg" alt="截屏2020-03-27下午5.33.11" style="zoom:80%;" />
+<h2 id="卸载">卸载</h2>
+<p><code>/usr/bin/ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/uninstall)&quot;</code></p>
+<h2 id="注意">注意</h2>
+<ol>
+<li></li>
+</ol>
+<p><code>Failed to connect to raw.githubusercontent.com port 443: Connection refused error:</code>  <s>重新打开一个terminal即可</s> 建议直接设置端口，这种情况一般是被墙了</p>
+<h2 id="工作流程">工作流程</h2>
+<img src="https://tva1.sinaimg.cn/large/00831rSTly1gd8md42fp3j30zb0oy42o.jpg" alt="截屏2020-03-27下午5.34.14" style="zoom:80%;" />
+<h2 id="后记">后记</h2>
+<p>意外发现cotilina自带了python3，那就不安装了，省的还要设置path</p>
+<p>然后一直在那个设置了端口的终端跑命令，很快就下载完了pycharm-edu，一切都好用</p>
+</li>
+</ul>
 
                         </div>
                         <div class="post-toc">
-                            
+                            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#%E4%BB%8B%E7%BB%8D">介绍</a></li>
+<li><a href="#%E5%AE%89%E8%A3%85">安装</a></li>
+<li><a href="#%E5%8D%B8%E8%BD%BD">卸载</a></li>
+<li><a href="#%E6%B3%A8%E6%84%8F">注意</a></li>
+<li><a href="#%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%A8%8B">工作流程</a></li>
+<li><a href="#%E5%90%8E%E8%AE%B0">后记</a></li>
+</ul>
+</li>
+</ul>
+
                         </div>
                         <section class="post-copyright en">
                             <!--en-->
@@ -237,7 +309,7 @@
 
                             <p class="copyright-item">
                                 <span>Permalink:</span>
-                                <span><a href="https://onkno.github.io/post/macos-chu-ti-yan/">https://onkno.github.io/post/macos-chu-ti-yan/</a></span>
+                                <span><a href="https://onkno.github.io/post/homebrew-cai-keng/">https://onkno.github.io/post/homebrew-cai-keng/</a></span>
                             </p>
 
                             <p class="copyright-item">
@@ -254,7 +326,7 @@
 
                             <p class="copyright-item">
                                 <span>&#x6C38;&#x4E45;&#x94FE;&#x63A5;:</span>
-                                <span><a href="https://onkno.github.io/post/macos-chu-ti-yan/">https://onkno.github.io/post/macos-chu-ti-yan/</a></span>
+                                <span><a href="https://onkno.github.io/post/homebrew-cai-keng/">https://onkno.github.io/post/homebrew-cai-keng/</a></span>
                             </p>
 
                             <p class="copyright-item">
@@ -268,6 +340,8 @@
                                 <span>Tag(s):</span>
                                 <span class="tag">
                                 
+                                
+                                <a href="https://onkno.github.io/tag/LgTceiTTi/"># 技术</a>
                                 
                                 <a href="https://onkno.github.io/tag/c9I3hpcpM/"># 肉体和思想总要有一个在路上</a>
                                 
@@ -287,6 +361,8 @@
                                 <span class="tag">
                                 
                                 
+                                <a href="https://onkno.github.io/tag/LgTceiTTi/"># 技术</a>
+                                
                                 <a href="https://onkno.github.io/tag/c9I3hpcpM/"># 肉体和思想总要有一个在路上</a>
                                 
                                 
@@ -301,13 +377,9 @@
                         </section>
                         <section class="post-nav">
                             
-                                <a class="prev" rel="prev" href="https://onkno.github.io/post/homebrew-cai-keng/">
-                                    Homebrew 踩坑
-                                </a>
-                                
                                     
-                                        <a class="next" rel="next" href="https://onkno.github.io/post/hui-jia-yuan-chuang-jie-xuan/">
-                                            【回家】——原创节选
+                                        <a class="next" rel="next" href="https://onkno.github.io/post/macos-chu-ti-yan/">
+                                            macOS初体验
                                         </a>
                                         
                         </section>
