@@ -2,13 +2,122 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://iTb2b.github.io</id>
     <title>iTb2b-Tao Cheung‘s Blog</title>
-    <updated>2020-04-03T10:42:16.949Z</updated>
+    <updated>2020-04-04T15:06:15.790Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://iTb2b.github.io"/>
     <link rel="self" href="https://iTb2b.github.io/atom.xml"/>
     <logo>https://iTb2b.github.io/images/avatar.png</logo>
     <icon>https://iTb2b.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, iTb2b-Tao Cheung‘s Blog</rights>
+    <entry>
+        <title type="html"><![CDATA[Git入门]]></title>
+        <id>https://iTb2b.github.io/post/git-ru-men/</id>
+        <link href="https://iTb2b.github.io/post/git-ru-men/">
+        </link>
+        <updated>2020-04-04T15:02:29.000Z</updated>
+        <content type="html"><![CDATA[<h2 id="git简介-安装">Git简介、安装</h2>
+<p>分布式版本控制系统</p>
+<p>macOS自带，故略</p>
+<h2 id="版本库">版本库</h2>
+<p>版本库是一个仓库(respository)，记录文件的修改删除，是文件<strong>历史</strong> 管理器</p>
+<h3 id="创建目录">创建目录</h3>
+<pre><code class="language-shell">mkdir learngit
+cd learngit
+pwd
+/Users/taocheung/Git/learngit
+
+</code></pre>
+<h3 id="初始化">初始化</h3>
+<pre><code class="language-shell">git init
+Initialized empty Git repository in /Users/taocheung/Git/learngit/.git/
+ls -a
+
+</code></pre>
+<p>告诉我这是一个空的仓库，查看了隐藏目录后发现有一个.git文件，勿动</p>
+<h3 id="添加文件">添加文件</h3>
+<blockquote>
+<p>珍爱生命，远离巨硬</p>
+</blockquote>
+<h4 id="前提">前提</h4>
+<p>Git只跟踪文本文件的改动，对于图片和视频这些二进制文件，只去追踪大小的改变。</p>
+<p>Microsoft的word就是二进制格式，所以不要用Git去管理word，这是其一</p>
+<p>其二，文本都是有编码的，中文常用GBK，建议使用UTF-8。Microsoft的文本文件，添加了十六进制字符，会出错。</p>
+<h4 id="正文">正文</h4>
+<blockquote>
+<p>由于macOS的局限性，所以改创建一个markdown文件</p>
+</blockquote>
+<p>在<strong>learngit</strong>下创建一个文件<strong>readme.md</strong></p>
+<p>添加内容</p>
+<pre><code class="language-markdown">Git is a version control system.
+
+Git is free software.
+</code></pre>
+<p>之后提交文件</p>
+<pre><code class="language-shell">git add readme.md
+</code></pre>
+<p>无任何显示</p>
+<p>用<code>git commit</code>告诉Git，把文件提交到仓库</p>
+<pre><code class="language-shell">git commit -m &quot;wrote a readme file&quot;
+ 1 file changed, 3 insertions(+)
+ create mode 100644 readme.md
+</code></pre>
+<p>表示一个文件被改动，插入了三行内容（我的光标在第三行）</p>
+<h2 id="时光机穿梭">时光机穿梭</h2>
+<p>现在修改文件</p>
+<pre><code class="language-markdown">Git is a distributed version control system.
+
+Git is free software.
+</code></pre>
+<p>使用<code>Git status</code>查看结果，//查看状态</p>
+<pre><code class="language-shell">On branch master
+Changes not staged for commit:
+  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)
+  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)
+	modified:   readme.md
+
+no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)
+</code></pre>
+<p>在<strong>master</strong>分支，“changes”还没有被提交</p>
+<p>如何查看修改了什么内容？<code>git diff</code></p>
+<pre><code class="language-shell">diff --git a/readme.md b/readme.md
+index 8d7a2fb..14bbe9c 100644
+--- a/readme.md
++++ b/readme.md
+@@ -1,3 +1,4 @@
+-Git is a version control system.
++Git is a distributed version control system.
++
++Git is free software.
+
+-Git is free software.
+\ No newline at end of file
+(END)
+</code></pre>
+<p>按q退出</p>
+<p>知道了修改了什么之后再进行提交就放心了</p>
+<pre><code class="language-shell">git add readme.md
+</code></pre>
+<p>在提交到仓库之前来看一下状态</p>
+<pre><code class="language-shell">git status
+On branch master
+Changes to be committed:
+  (use &quot;git restore --staged &lt;file&gt;...&quot; to unstage)
+	modified:   readme.md
+</code></pre>
+<p><strong>Changes to be committed</strong>，改变即将被commit</p>
+<pre><code class="language-shell">git commit -m &quot;add distributed&quot;
+git commit --amend --reset-author
+
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+</code></pre>
+<p>再查看状态</p>
+<pre><code class="language-shell">$ git status
+On branch master
+nothing to commit, working tree clean
+</code></pre>
+<p><strong>working tree clean</strong></p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[1.Introduction to iOS 11, Xcode9 and Swift4]]></title>
         <id>https://iTb2b.github.io/post/1introduction-to-ios-11-xcode9-and-swift4/</id>
