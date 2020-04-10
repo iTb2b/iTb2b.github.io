@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://iTb2b.github.io</id>
     <title>iTb2b-Tao Cheung‘s Blog</title>
-    <updated>2020-04-09T14:26:31.129Z</updated>
+    <updated>2020-04-10T15:52:23.903Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://iTb2b.github.io"/>
     <link rel="self" href="https://iTb2b.github.io/atom.xml"/>
@@ -221,6 +221,59 @@ On branch master
 nothing to commit, working tree clean
 </code></pre>
 <p><strong>working tree clean</strong></p>
+<h3 id="工作区与暂存区">工作区与暂存区</h3>
+<p>Git具有<strong>工作区</strong>和<strong>暂存区</strong>的概念</p>
+<ul>
+<li>工作区就是能看到的目录</li>
+</ul>
+<p>工作区有一个隐藏文件.git，是版本库</p>
+<p>版本库里有很多东西，其中包括暂存区stage、分支master、指针HEAD</p>
+<figure data-type="image" tabindex="1"><img src="https://tva1.sinaimg.cn/large/00831rSTly1gdp37zbjltj30cq06iaa8.jpg" alt="Git-repo，from 廖雪峰's blog" loading="lazy"></figure>
+<p>我们把文件往Git版本库里添加的时候，是分两步执行的：</p>
+<ol>
+<li>用<code>git add</code>把文件添加进去，实际上就是把文件修改添加到暂存区；</li>
+<li>用<code>git commit</code>提交更改，实际上就是把暂存区的所有内容提交到当前分支。</li>
+</ol>
+<p>因为我们创建Git版本库时，Git自动为我们创建了唯一一个<code>master</code>分支，所以，现在，<code>git commit</code>就是往<code>master</code>分支上提交更改。</p>
+<p>练习</p>
+<p>增加一行内容</p>
+<pre><code class="language-markdown">Git is a distributed version control system.
+Git is free software distributed under the GPL.
+Git has a mutable index called stage.
+</code></pre>
+<p>增加一个文件</p>
+<p><strong>LICENSE.md</strong></p>
+<p>查看状态</p>
+<pre><code class="language-shell">On branch master
+Changes not staged for commit:
+  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)
+  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)
+	modified:   readme.md
+
+Untracked files:
+  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)
+	LICENSE.md
+</code></pre>
+<p>Readme.md被修改，LICENSE.md未被tracked</p>
+<p>使用命令<code>git add .</code>，全部添加</p>
+<p>再次查看状态</p>
+<pre><code class="language-shell">On branch master
+Changes to be committed:
+  (use &quot;git restore --staged &lt;file&gt;...&quot; to unstage)
+	new file:   LICENSE.md
+	modified:   readme.md
+</code></pre>
+<p>现在的暂存区</p>
+<figure data-type="image" tabindex="2"><img src="https://tva1.sinaimg.cn/large/00831rSTly1gdp3l38emsj30cq06ijri.jpg" alt="Git 暂存区变动" loading="lazy"></figure>
+<p>使用commit 提交</p>
+<pre><code class="language-shell">git commit -m &quot;understand how stage works&quot;
+[master eeb0409] understand how stage works
+ 2 files changed, 2 insertions(+)
+ create mode 100644 LICENSE
+</code></pre>
+<p>此时工作区很干净</p>
+<figure data-type="image" tabindex="3"><img src="https://tva1.sinaimg.cn/large/00831rSTly1gdp3ow0p65j30cv06iq32.jpg" alt="git-stage-after-commit" loading="lazy"></figure>
+<p>暂存区中没有内容了</p>
 ]]></content>
     </entry>
     <entry>
