@@ -155,7 +155,7 @@
                     <article class="post-wrap">
                         <header class="post-header">
                             <h1 class="post-title">
-                                Homebrew 踩坑
+                                Github 如何维护别人的项目
                             </h1>
                             
                                 <!--en-->
@@ -165,19 +165,19 @@
                                         Tao Cheung‘s Blog
                                     </a>
                                     <span class="post-time">
-                                Date: <a href="#">2020-03-27</a>
+                                Date: <a href="#">2020-04-30</a>
                             </span>
                                     <span class="post-readtime">Reading Time:<a
-                                    href="#">2.2
+                                    href="#">1.3
                                     mins</a></span>
-                                    <span class="post-words">words:<a href="#">547</a></span>
+                                    <span class="post-words">words:<a href="#">334</a></span>
                                     
                                         <span class="post-category">
                                 Category:
                                 
-                                <a href="https://iTb2b.github.io/tag/LgTceiTTi/">技术</a>
+                                <a href="https://iTb2b.github.io/tag/HnwqGDfOf/">Git</a>
                                 
-                                <a href="https://iTb2b.github.io/tag/c9I3hpcpM/">肉体和思想总要有一个在路上</a>
+                                <a href="https://iTb2b.github.io/tag/LgTceiTTi/">技术</a>
                                 
                             </span>
                                         
@@ -186,95 +186,73 @@
                         </header>
                         
                         <div class="post-content">
-                            <ul>
-<li>
-<p>介绍</p>
-</li>
-<li>
-<p>安装</p>
-</li>
-<li>
-<p>卸载</p>
-</li>
-<li>
-<p>注意</p>
-</li>
-<li>
-<p>工作流程</p>
-</li>
-<li>
-<p>后记</p>
-<hr>
-<h2 id="介绍">介绍</h2>
-<p>Homebrew是macOS 下一款多功能的包管理工具，还能安装各种应用程序，方便管理</p>
-<p>如pycharm，python，甚至是qq和微信</p>
-<p><a href="https://brew.sh">Homebrew官网</a></p>
-<img src="https://tva1.sinaimg.cn/large/00831rSTly1gd8imyw3swj316i0sxtgf.jpg" alt="截屏2020-03-27下午3.25.27" style="zoom: 33%;" />
-<p>在安装之前，我还寻思着为什么网上这么多避免“踩坑”的文章，不就是装个软件吗</p>
-<p>现在想来，我真是太naive了😭</p>
-<h2 id="安装">安装</h2>
-<pre><code class="language-terminal">/bin/bash -c &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)&quot;
-</code></pre>
-<img src="https://tva1.sinaimg.cn/large/00831rSTly1gd8isqvnlkj30ka0dzq6c.jpg" alt="截屏2020-03-27下午3.31.40" style="zoom: 67%;" />
-<p>这样……当然是不行的！中国可是全球最大的局域网，怎么可能就这么简单安装上了</p>
-<p>事实上，如果按照官网给出的命令直接回车，下载速度是个位数，还时不时连接不上</p>
-<p>这就是第一个坑了，怎么才能下载得快</p>
-<p>经过网络的搜索，大致两个办法</p>
-<ul>
-<li>
-<p>端口代理</p>
-<p>我采取了这个办法，并且成功了，下载速度有时在1M/s以上</p>
-<p>首先输入</p>
-<p><code>export http_proxy=http://127.0.0.1:1087;export https_proxy=http://127.0.0.1:1087;</code></p>
-<p>1087是本地代理端口号</p>
-<p>无误后再按照官网输入安装命令</p>
-</li>
-</ul>
-<img src="https://tva1.sinaimg.cn/large/00831rSTly1gd8lr5daorj30jd0d9goh.jpg" alt="截屏2020-03-27下午5.13.57" style="zoom:80%;" />
-<ul>
-<li>
-<p>换源</p>
-<p>虽然没有用到这个办法，但是为了以防万一，还是记录下来</p>
-<p><code>curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install &gt;&gt; Temp_Brew</code>  这个命令是把临时下载文件导出来</p>
-<p><code>open Temp_Brew</code> 打开文件</p>
-<p><code>BREW_REPO = &quot;https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/brew.git&quot;.freeze</code> 修改为清华源</p>
-<blockquote>
-<p>备用其他源，好像中科大用的人较多</p>
-<p>阿里源：https://mirrors.aliyun.com/homebrew/brew.git<br>
-USTC（中科大镜像）：https://mirrors.ustc.edu.cn/brew.git</p>
+                            <blockquote>
+<p><a href="https://www.jianshu.com/p/00cf29d2d66c">原文地址</a></p>
 </blockquote>
-<p><code>/usr/bin/ruby Temp_Brew</code> 保存后输入这一行代码，然后按提示即可</p>
+<h5 id="git操作">Git操作</h5>
+<ul>
+<li>
+<p><code>fork</code>一下：首先在项目主页上点击<code>Fork</code>，然后你的<code>github</code>主页上就会多一个项目仓库。</p>
+</li>
+<li>
+<p><code>git clone</code>:这个项目到本地。要修改别人的项目当然要下载到本地拉。</p>
+</li>
+<li>
+<p>修改代码，完善功能。</p>
+</li>
+<li>
+<p><code>git status</code>:检查一下改动了那些文件，如果有需要忽略或者增加<code>track</code>的文件，就<code>git add</code>,或者编辑<code>vi .gitignore</code>文件，这个文件的语法在文件里面写的很清除，此处省略。</p>
+<ul>
+<li>
+<p>编辑完<code>.gitignore</code>文件后，用<code>git status</code>检查一下，如果没有变化，就是缓存没有清除，使用这个命令:</p>
+<p><code>git rm -r --cached .</code>,之后<code>git status</code>。</p>
 </li>
 </ul>
-<p>感谢b站up主<a href="https://www.mintimate.cn/2019/06/26/Mac%E6%9D%82%E5%9D%9B/">Mintimate</a></p>
-<img src="https://tva1.sinaimg.cn/large/00831rSTly1gd8mb7xbp2j30lw0f7mzz.jpg" alt="截屏2020-03-27下午5.33.11" style="zoom:80%;" />
-<h2 id="卸载">卸载</h2>
-<p><code>/usr/bin/ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/uninstall)&quot;</code></p>
-<h2 id="注意">注意</h2>
-<ol>
+</li>
+<li>
+<p><code>git commit -a -m &quot;Add:balabalabala&quot;</code>:提交更改，<code>-a</code>命令，只提交改动，<code>-m</code>改动说明，说明格式建议如下：</p>
+</li>
+</ul>
+<pre><code class="language-shell">Mod: remove unused code, 表示修改（Modify）
+Add: a new module to have faster process, 表示新增（Add）
+Rem: deprecate unused modules, 表示移除（Remove）
+Ref: improved the implementation of module X, 表示重构（Refactory）
+</code></pre>
+<ul>
+<li>
+<p><code>git push -u origin master</code>：提交到远程仓库，至此终端上的操作完成。进入<code>github</code>网页操作。</p>
+</li>
+<li>
+<p>进入自己的主页，选择这个fork的项目，然后点击</p>
+<p>进入<code>pull request</code>页面，确认提交的更改，确认无误后，开始填写说明。</p>
+<figure data-type="image" tabindex="1"><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gebplse9a8j308l01l0sj.jpg" alt="img" loading="lazy"></figure>
+</li>
+<li>
+<p>如下，点击<code>create pull request</code>来填写说明</p>
+<figure data-type="image" tabindex="2"><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gebpmcexirj30sc074wez.jpg" alt="img" loading="lazy"></figure>
+</li>
 <li></li>
-</ol>
-<p><code>Failed to connect to raw.githubusercontent.com port 443: Connection refused error:</code>  <s>重新打开一个terminal即可</s> 建议直接设置端口，这种情况一般是被墙了</p>
-<h2 id="工作流程">工作流程</h2>
-<img src="https://tva1.sinaimg.cn/large/00831rSTly1gd8md42fp3j30zb0oy42o.jpg" alt="截屏2020-03-27下午5.34.14" style="zoom:80%;" />
-<h2 id="后记">后记</h2>
-<p>意外发现cotilina自带了python3，那就不安装了，省的还要设置path</p>
-<p>然后一直在那个设置了端口的终端跑命令，很快就下载完了pycharm-edu，一切都好用</p>
-</li>
 </ul>
-
+  <img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gebpmox9rqj30qw0gldgm.jpg" alt="img" style="zoom:67%;" />
                         </div>
                         
                             <div class="post-toc">
                                 <ul class="markdownIt-TOC">
 <li>
 <ul>
-<li><a href="#%E4%BB%8B%E7%BB%8D">介绍</a></li>
-<li><a href="#%E5%AE%89%E8%A3%85">安装</a></li>
-<li><a href="#%E5%8D%B8%E8%BD%BD">卸载</a></li>
-<li><a href="#%E6%B3%A8%E6%84%8F">注意</a></li>
-<li><a href="#%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%A8%8B">工作流程</a></li>
-<li><a href="#%E5%90%8E%E8%AE%B0">后记</a></li>
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#git%E6%93%8D%E4%BD%9C">Git操作</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -287,9 +265,9 @@ USTC（中科大镜像）：https://mirrors.ustc.edu.cn/brew.git</p>
                                                         <span style="margin-right:15px">
                                                     <i class="post-share"></i>
                                                     <span>Share:</span>
-                                                        <a title="QR Code" target="_blank" href="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://iTb2b.github.io/post/homebrew-cai-keng/"><i class="fa fa-qrcode"></i></a>
-                                                        <a title="QQ" target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://iTb2b.github.io/post/homebrew-cai-keng/&sharesource=qzone&title=Homebrew 踩坑&pics=https://iTb2b.github.io/images/avatar.png?v=1588223234757&summary="><i class="fa fa-qq"></i></a>
-                                                        <a title="Weibo" target="_blank" href="https://service.weibo.com/share/share.php?url=https://iTb2b.github.io/post/homebrew-cai-keng/&sharesource=weibo&title=Homebrew 踩坑 + " - " + &pic="https://iTb2b.github.io/images/avatar.png?v=1588223234757 "><i class="fa fa-weibo "></i></a>
+                                                        <a title="QR Code" target="_blank" href="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://iTb2b.github.io/post/github-ru-he-wei-hu-bie-ren-de-xiang-mu/"><i class="fa fa-qrcode"></i></a>
+                                                        <a title="QQ" target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://iTb2b.github.io/post/github-ru-he-wei-hu-bie-ren-de-xiang-mu/&sharesource=qzone&title=Github 如何维护别人的项目&pics=https://iTb2b.github.io/images/avatar.png?v=1588223234757&summary="><i class="fa fa-qq"></i></a>
+                                                        <a title="Weibo" target="_blank" href="https://service.weibo.com/share/share.php?url=https://iTb2b.github.io/post/github-ru-he-wei-hu-bie-ren-de-xiang-mu/&sharesource=weibo&title=Github 如何维护别人的项目 + " - " + &pic="https://iTb2b.github.io/images/avatar.png?v=1588223234757 "><i class="fa fa-weibo "></i></a>
                                                         
                                                                 </span>
                                                                 <!--en-->
@@ -299,12 +277,12 @@ USTC（中科大镜像）：https://mirrors.ustc.edu.cn/brew.git</p>
                                                                         <span class="tag ">
                         
                         
-                        <a href="https://iTb2b.github.io/tag/LgTceiTTi/">#
-                                                技术
+                        <a href="https://iTb2b.github.io/tag/HnwqGDfOf/">#
+                                                Git
                                                     </a>
                                                     
-                        <a href="https://iTb2b.github.io/tag/c9I3hpcpM/">#
-                                                肉体和思想总要有一个在路上
+                        <a href="https://iTb2b.github.io/tag/LgTceiTTi/">#
+                                                技术
                                                     </a>
                                                     
                                                         
@@ -320,13 +298,9 @@ USTC（中科大镜像）：https://mirrors.ustc.edu.cn/brew.git</p>
                                                                                 <!---->
                                                                                 <section class="post-nav">
                                                                                     
-                                                                                        <a class="prev" rel="prev" href="https://iTb2b.github.io/post/1introduction-to-ios-11-xcode9-and-swift4/">
-                                                                                            1.Introduction to iOS 11, Xcode9 and Swift4
-                                                                                        </a>
-                                                                                        
                                                                                             
-                                                                                                <a class="next" rel="next" href="https://iTb2b.github.io/post/macos-chu-ti-yan/">
-                                                                                                    macOS初体验
+                                                                                                <a class="next" rel="next" href="https://iTb2b.github.io/post/xi-la-li-bai-xuan-yan-jiang-cheng-ren-shi-bai-tong-ku-dan-wei-liao-li-xiang-zhi-de-ying-yu-quan-wen/">
+                                                                                                    希拉里败选演讲：承认失败痛苦，但为了理想值得（英语全文）
                                                                                                 </a>
                                                                                                 
                                                                                 </section>

