@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://iTb2b.github.io</id>
     <title>Tao Cheung‘s Blog</title>
-    <updated>2020-04-30T05:16:29.148Z</updated>
+    <updated>2020-05-04T15:32:44.064Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://iTb2b.github.io"/>
     <link rel="self" href="https://iTb2b.github.io/atom.xml"/>
@@ -10,6 +10,20 @@
     <logo>https://iTb2b.github.io/images/avatar.png</logo>
     <icon>https://iTb2b.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, Tao Cheung‘s Blog</rights>
+    <entry>
+        <title type="html"><![CDATA[What is velocity gradient?]]></title>
+        <id>https://iTb2b.github.io/post/what-is-velocity-gradient/</id>
+        <link href="https://iTb2b.github.io/post/what-is-velocity-gradient/">
+        </link>
+        <updated>2020-05-04T15:30:44.000Z</updated>
+        <content type="html"><![CDATA[<blockquote>
+<p><a href="https://qr.ae/pNr0OO">Quora</a></p>
+</blockquote>
+<p>When you talk about RATE that means we are talking about how the physical quantity changes with time. For example: rate of change of displacement is called velocity.</p>
+<p>In the same way if we are talking about gradient that means how the physical quantity varies with distance. For example : potential gradient gives you Vector field.</p>
+<p>So in your case velocity gradient means how is the magnitude of velocity varies with distance. For example: when fluid is flowing through a pipe velocity of each layer is defined from the axis of cylindrical pipe. So velocity of fluid at axial point us max and if you move from axis to surface then velocity of the layer decreases .</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Github 如何维护别人的项目]]></title>
         <id>https://iTb2b.github.io/post/github-ru-he-wei-hu-bie-ren-de-xiang-mu/</id>
