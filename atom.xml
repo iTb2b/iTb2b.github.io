@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://iTb2b.github.io</id>
     <title>Tao Cheung‘s Blog</title>
-    <updated>2020-05-04T15:38:57.419Z</updated>
+    <updated>2020-05-07T10:52:41.178Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://iTb2b.github.io"/>
     <link rel="self" href="https://iTb2b.github.io/atom.xml"/>
@@ -10,6 +10,41 @@
     <logo>https://iTb2b.github.io/images/avatar.png</logo>
     <icon>https://iTb2b.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, Tao Cheung‘s Blog</rights>
+    <entry>
+        <title type="html"><![CDATA[咖啡]]></title>
+        <id>https://iTb2b.github.io/post/ka-pei/</id>
+        <link href="https://iTb2b.github.io/post/ka-pei/">
+        </link>
+        <updated>2020-05-07T10:50:47.000Z</updated>
+        <content type="html"><![CDATA[<p>最近买了一堆挂耳咖啡回来，因为没有条件现磨，也不想喝速溶，无意之中发现了这么个宝贝</p>
+<p>撕开包装，浓郁的咖啡豆的香气塞满了我的鼻腔</p>
+<p>将里面的小包取出，再撕开上部的封条</p>
+<p>小包里装的是被磨成粉末的咖啡粉</p>
+<p>把它挂在杯子上（没有咖啡杯）</p>
+<p>量取 150ml 左右的热水，轻轻倒在表面</p>
+<p>这一步，据懂行的说，叫<strong>闷蒸</strong></p>
+<p>咱也不懂，照做就是</p>
+<p>约莫等了大概 30s ，再分批、缓缓注入剩下的水</p>
+<p>没有手冲壶，找了根细长的棒做引流</p>
+<figure data-type="image" tabindex="1"><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gek2m228w9j308c07it8w.jpg" alt="这个就是手冲壶" loading="lazy"></figure>
+<p>拿着实验室学来的过滤引水的方法，让水淹没咖啡粉</p>
+<p>在水下降到一半时，再次注入</p>
+<p>听着滴滴答答液体下落的声音，嗅着不习惯的香气</p>
+<p>有时还会忘记加水</p>
+<img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gek2rk6ztrj30uu0u0kjl.jpg" alt="油脂浮在表面" style="zoom:50%;" />
+<p>结束之后，扔掉没用的滤包，仅供使用一次</p>
+<p>嘬一口，还行，不苦</p>
+<p>再嘬一口，有点意思，有一种不是咖啡的味道</p>
+<p>看看包装——“蓝山风味”</p>
+<p>那就姑且把这种味道叫<strong>蓝山</strong>好了</p>
+<p>尝尝咖啡也就是图个新鲜，或许也会喜欢上</p>
+<p>但毕竟老是喝四十多的星巴克容易成为阶级敌人</p>
+<p>当然，也容易成为我自己的敌人</p>
+<p>挂耳还是方便，或许比不上手冲那么新鲜，但总比速溶来得健康</p>
+<p>我喝不出什么花样，更喝不出“大师，我悟了”的感受</p>
+<p>就是杯饮料，罢了</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[What is velocity gradient?]]></title>
         <id>https://iTb2b.github.io/post/what-is-velocity-gradient/</id>
