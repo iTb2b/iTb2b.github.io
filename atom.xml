@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://iTb2b.github.io</id>
     <title>Tao Cheung‘s Blog</title>
-    <updated>2020-05-07T10:52:41.178Z</updated>
+    <updated>2020-05-13T12:00:25.284Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://iTb2b.github.io"/>
     <link rel="self" href="https://iTb2b.github.io/atom.xml"/>
@@ -10,6 +10,39 @@
     <logo>https://iTb2b.github.io/images/avatar.png</logo>
     <icon>https://iTb2b.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, Tao Cheung‘s Blog</rights>
+    <entry>
+        <title type="html"><![CDATA[一日一技 05132020]]></title>
+        <id>https://iTb2b.github.io/post/yi-ri-yi-ji-05132020/</id>
+        <link href="https://iTb2b.github.io/post/yi-ri-yi-ji-05132020/">
+        </link>
+        <updated>2020-05-13T11:32:42.000Z</updated>
+        <content type="html"><![CDATA[<blockquote>
+<p>我真傻……</p>
+</blockquote>
+<h2 id="pdf-保存">PDF 保存</h2>
+<p>我一直是用 Safari 截图后，利用自带的截图转 PDF 功能，然后再导入到 marginnote。</p>
+<p>确实是方便快捷，但是，这获得的是一整页 PDF，也就是说，无论原来的网页多长，最后都只会得到一页</p>
+<p>这样的 PDF 十分狭长，不好读。</p>
+<p>前几天乘着限免，下载了一个 PDF 工具，可以把网页转为 PDF，当然，这就没办法像 Safari 一样，用阅读模式除去烦人的广告，不过它起码是分页的了。</p>
+<p>今天完成工作后，偶然想起这件事，便查了下有没有办法，在 macOS 上把网页保存为 PDF</p>
+<p>我看到了<strong>少数派</strong></p>
+<p>文章是 17 年的了，但现在依然有用，利用了 Safari 原有的导出为 PDF 功能。</p>
+<p><a href="https://sspai.com/post/38686">详情点击</a></p>
+<p>再然后，末尾写了 <a href="https://sspai.com/post/38749">在 iPhone 上</a></p>
+<p>简而言之，就是利用了打印功能，于我，可以先在 Safari 上打开 <strong>阅读视图</strong> ，这样就消除了广告，顺便排了版</p>
+<p>再点击页面下方的<strong>分享</strong>按钮，选择打印。有 <strong>3d-touch</strong> 的直接长按，没有的就对准随便一个页面，双指向外撑开，就能看到分享页面了，保存到 MN 中即可，十分方便。</p>
+<p>简直救我于水火之中</p>
+<p>我一直思考如何把超长的一页 PDF 分割成 A4 纸大小，却忘记了从源头改变一下想法。</p>
+<h2 id="apple-music-导入资料库">Apple Music 导入资料库</h2>
+<p>一直苦于苹果自带的音乐找不到想要听的音乐，版权实在太少，要不就是只在 iTunes 发售。</p>
+<p>前几日想起了之前逛的论坛 <a href="https://www.tsdm.live/forum.php">天使动漫</a> ，记得里面有很多别人买来分享的正版歌曲，音质方面当然有保证</p>
+<p>看了一下，甚至有 iTunes 自购分区。</p>
+<p>查了查怎么用 Apple music 导入，同步，其实还是很方便的，点这个 <a href="https://zhuanlan.zhihu.com/p/134184993">与 Apple Music 一同优雅地享受音乐</a>。而且正版音乐自带歌手信息、专辑封面</p>
+<p>对我这个整理癖来说，十分满足</p>
+<figure data-type="image" tabindex="1"><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1ger2jwkf7lj31100n419k.jpg" alt="整理好的 Apple Music" loading="lazy"></figure>
+<p><a href="https://sspai.com/post/40732">这个留作以后看</a> <s>(我一定会看的)</s></p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[咖啡]]></title>
         <id>https://iTb2b.github.io/post/ka-pei/</id>
@@ -519,31 +552,6 @@ USTC（中科大镜像）：https://mirrors.ustc.edu.cn/brew.git</p>
 <strong>typora</strong>+<strong>ipic</strong><br>
 简单的几个按键就完成了图片上传和插入的过程，甚至在调教好后，把图片拖进来就能直接上传图片<br>
 简单、快速、高效！</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[【回家】——原创节选]]></title>
-        <id>https://iTb2b.github.io/post/hui-jia-yuan-chuang-jie-xuan/</id>
-        <link href="https://iTb2b.github.io/post/hui-jia-yuan-chuang-jie-xuan/">
-        </link>
-        <updated>2020-01-29T11:33:00.000Z</updated>
-        <content type="html"><![CDATA[<p>我拖着行李，快步走向楼寓门，心扑通扑通地跳，我等不及电梯，三步并作两步，不停地向上攀爬。我等不及了！用锃亮的钥匙插入门锁，扭动，拉开，连行李都顾不上便冲入家中。<br>
-空无一人。<br>
-我仔细地环顾了一圈，确信没有人后，把行李拉了进去，轻轻地关上了门。我坐在沙发上，背靠着靠过无数次的软垫，不知该想些什么、做些什么。我在期待些什么，我不敢说，我不敢想，我害怕我的心愿不能成真，我害怕一切都是我的自以为是。<br>
-“哈……”我把头向后靠了靠，舒展了刚才爬梯时不断奔跑的腿，抬起胳膊擦了擦头上的汗，但我的心始终放松不下来。<br>
-“嘭！”是楼下大门关住的声音！<br>
-我绷起了神经，刚放在膝盖上的手掌又急剧地出汗。寂静的家中除了我的呼吸声，还有墙外有人在爬楼梯的声音。这是我熟悉的步重、是我熟悉的频率……我站起身来，腿不听使唤地向门口迈去，心脏像加装了发动机一样跳跃。<br>
-我大口大口地喘着气，脚仍在向前奔跑，余光一瞥，窗外刚刚下过雨的天空正在逐渐放晴，可这已经是傍晚了，晴天有什么用呢？<br>
-在我刚刚到达门口的同时，锁被拧开，门外的人毫不犹豫地向我冲来，我张开双臂把她拥入怀中，低语道：<br>
-“欢迎回来。”<br>
-金色的余晖瞬间射入客厅，整间屋子像法式清汤一般澄澈。<br>
-“我感到很疲倦，<br>
-离家乡还是很远，<br>
-害怕再也不能回到你身边。”<br>
-这时，我才明白了这句歌词真正的意义。</p>
-<hr>
-<p>节选自日记随笔，于2020年1月8日</p>
-<h3 id="灵魂的思念胜于千言万语">灵魂的思念胜于千言万语。</h3>
 ]]></content>
     </entry>
 </feed>
