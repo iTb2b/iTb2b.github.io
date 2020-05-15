@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://iTb2b.github.io</id>
     <title>Tao Cheung‘s Blog</title>
-    <updated>2020-05-13T12:00:25.284Z</updated>
+    <updated>2020-05-15T15:33:26.330Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://iTb2b.github.io"/>
     <link rel="self" href="https://iTb2b.github.io/atom.xml"/>
@@ -10,6 +10,77 @@
     <logo>https://iTb2b.github.io/images/avatar.png</logo>
     <icon>https://iTb2b.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, Tao Cheung‘s Blog</rights>
+    <entry>
+        <title type="html"><![CDATA[如何同步一个 fork]]></title>
+        <id>https://iTb2b.github.io/post/ru-he-tong-bu-yi-ge-fork/</id>
+        <link href="https://iTb2b.github.io/post/ru-he-tong-bu-yi-ge-fork/">
+        </link>
+        <updated>2020-05-15T15:32:26.000Z</updated>
+        <content type="html"><![CDATA[<blockquote>
+<p>自己 fork 了别人的 project 之后，当别人更新了，怎么再同步</p>
+</blockquote>
+<h2 id="具体方法">具体方法</h2>
+<h3 id="configuring-a-remote-for-a-fork">Configuring a remote for a fork</h3>
+<ul>
+<li>给 fork 配置一个 remote</li>
+<li>主要使用 <code>git remote -v</code> 查看远程状态。</li>
+</ul>
+<pre><code>git remote -v
+# origin  https://github.com/YOUR_USERNAME/YOUR_FORK.git (fetch)
+# origin  https://github.com/YOUR_USERNAME/YOUR_FORK.git (push)
+</code></pre>
+<ul>
+<li>添加一个将被同步给 fork 远程的上游仓库</li>
+</ul>
+<pre><code>git remote add upstream https://github.com/ORIGINAL_OWNER/ORIGINAL_REPOSITORY.git
+</code></pre>
+<ul>
+<li>再次查看状态确认是否配置成功。</li>
+</ul>
+<pre><code>git remote -v
+# origin    https://github.com/YOUR_USERNAME/YOUR_FORK.git (fetch)
+# origin    https://github.com/YOUR_USERNAME/YOUR_FORK.git (push)
+# upstream  https://github.com/ORIGINAL_OWNER/ORIGINAL_REPOSITORY.git (fetch)
+# upstream  https://github.com/ORIGINAL_OWNER/ORIGINAL_REPOSITORY.git (push)
+</code></pre>
+<h3 id="syncing-a-fork">Syncing a fork</h3>
+<ul>
+<li>从上游仓库 fetch 分支和提交点，传送到本地，并会被存储在一个本地分支 upstream/master<br>
+<code>git fetch upstream</code></li>
+</ul>
+<pre><code>git fetch upstream
+# remote: Counting objects: 75, done.
+# remote: Compressing objects: 100% (53/53), done.
+# remote: Total 62 (delta 27), reused 44 (delta 9)
+# Unpacking objects: 100% (62/62), done.
+# From https://github.com/ORIGINAL_OWNER/ORIGINAL_REPOSITORY
+#  * [new branch]      master     -&gt; upstream/master
+</code></pre>
+<ul>
+<li>切换到本地主分支(如果不在的话)<br>
+<code>git checkout master</code></li>
+</ul>
+<pre><code>git checkout master
+# Switched to branch 'master'
+</code></pre>
+<ul>
+<li>把 upstream/master 分支合并到本地 master 上，这样就完成了同步，并且不会丢掉本地修改的内容。<br>
+<code>git merge upstream/master</code></li>
+</ul>
+<pre><code>git merge upstream/master
+# Updating a422352..5fdff0f
+# Fast-forward
+#  README                    |    9 -------
+#  README.md                 |    7 ++++++
+#  2 files changed, 7 insertions(+), 9 deletions(-)
+#  delete mode 100644 README
+#  create mode 100644 README.md
+</code></pre>
+<ul>
+<li>如果想更新到 GitHub 的 fork 上，直接 <code>git push origin master</code> 就好了。</li>
+</ul>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[一日一技 05132020]]></title>
         <id>https://iTb2b.github.io/post/yi-ri-yi-ji-05132020/</id>
@@ -524,34 +595,6 @@ USTC（中科大镜像）：https://mirrors.ustc.edu.cn/brew.git</p>
 <p>然后一直在那个设置了端口的终端跑命令，很快就下载完了pycharm-edu，一切都好用</p>
 </li>
 </ul>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[macOS初体验]]></title>
-        <id>https://iTb2b.github.io/post/macos-chu-ti-yan/</id>
-        <link href="https://iTb2b.github.io/post/macos-chu-ti-yan/">
-        </link>
-        <updated>2020-03-26T10:08:26.000Z</updated>
-        <content type="html"><![CDATA[<p>抛去安装过程不谈（淘宝真香），macOS真是惊艳到我了</p>
-<p>之前在少数派看到了一篇文章，<a href="https://sspai.com/post/58805">Unix设计哲学</a></p>
-<p>其中的“文件概念”于我来说真是如救命稻草一般</p>
-<p>我一直深受win的文件管理的毒害，无论怎么整理文件，到最后一定会变得一团糟</p>
-<p>尤其是注册表，库之类的东西，删又删不干净</p>
-<p>从小学起家里就有了电脑，当时就喜欢编程，再之后，有了苹果手机</p>
-<p>那时起苹果的设计与交互方式就在潜移默化地影响着我</p>
-<p>如今“<strong>极简</strong>”已经成为了我选择东西与行事方案的一条重要法则，说是生活态度也不为过</p>
-<p>“<em>Give you what you want</em>”</p>
-<p>一个程序你该干啥就干啥，别想整其他幺蛾子</p>
-<blockquote>
-<p>“中国的软件，始于创意，盛于设计，死于社交（约炮）”——我说的</p>
-</blockquote>
-<p>前几日运用“things 3” + “Forest” + &quot;Marginnote 3&quot; 的工作流程来学习，效率有很大很大的提高</p>
-<p>别的不说，这三个应用的UI才是符合我的审美水平的</p>
-<img src="https://tva1.sinaimg.cn/large/00831rSTly1gd7i22obuvj30zb0oyjv7.jpg" alt="截屏2020-03-26下午6.10.30" style="zoom: 50%;" />
-<p>包括我现在写这篇文章，上传的图片都是在macOS下进行的<br>
-<strong>typora</strong>+<strong>ipic</strong><br>
-简单的几个按键就完成了图片上传和插入的过程，甚至在调教好后，把图片拖进来就能直接上传图片<br>
-简单、快速、高效！</p>
 ]]></content>
     </entry>
 </feed>

@@ -155,7 +155,7 @@
                     <article class="post-wrap">
                         <header class="post-header">
                             <h1 class="post-title">
-                                咖啡
+                                如何同步一个 fork
                             </h1>
                             
                                 <!--en-->
@@ -165,17 +165,19 @@
                                         Tao Cheung‘s Blog
                                     </a>
                                     <span class="post-time">
-                                Date: <a href="#">2020-05-07</a>
+                                Date: <a href="#">2020-05-15</a>
                             </span>
                                     <span class="post-readtime">Reading Time:<a
-                                    href="#">1.3
+                                    href="#">1.6
                                     mins</a></span>
-                                    <span class="post-words">words:<a href="#">399</a></span>
+                                    <span class="post-words">words:<a href="#">335</a></span>
                                     
                                         <span class="post-category">
                                 Category:
                                 
-                                <a href="https://iTb2b.github.io/tag/c9I3hpcpM/">肉体和思想总要有一个在路上</a>
+                                <a href="https://iTb2b.github.io/tag/HnwqGDfOf/">Git</a>
+                                
+                                <a href="https://iTb2b.github.io/tag/LgTceiTTi/">技术</a>
                                 
                             </span>
                                         
@@ -184,38 +186,86 @@
                         </header>
                         
                         <div class="post-content">
-                            <p>最近买了一堆挂耳咖啡回来，因为没有条件现磨，也不想喝速溶，无意之中发现了这么个宝贝</p>
-<p>撕开包装，浓郁的咖啡豆的香气塞满了我的鼻腔</p>
-<p>将里面的小包取出，再撕开上部的封条</p>
-<p>小包里装的是被磨成粉末的咖啡粉</p>
-<p>把它挂在杯子上（没有咖啡杯）</p>
-<p>量取 150ml 左右的热水，轻轻倒在表面</p>
-<p>这一步，据懂行的说，叫<strong>闷蒸</strong></p>
-<p>咱也不懂，照做就是</p>
-<p>约莫等了大概 30s ，再分批、缓缓注入剩下的水</p>
-<p>没有手冲壶，找了根细长的棒做引流</p>
-<figure data-type="image" tabindex="1"><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gek2m228w9j308c07it8w.jpg" alt="这个就是手冲壶" loading="lazy"></figure>
-<p>拿着实验室学来的过滤引水的方法，让水淹没咖啡粉</p>
-<p>在水下降到一半时，再次注入</p>
-<p>听着滴滴答答液体下落的声音，嗅着不习惯的香气</p>
-<p>有时还会忘记加水</p>
-<img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gek2rk6ztrj30uu0u0kjl.jpg" alt="油脂浮在表面" style="zoom:50%;" />
-<p>结束之后，扔掉没用的滤包，仅供使用一次</p>
-<p>嘬一口，还行，不苦</p>
-<p>再嘬一口，有点意思，有一种不是咖啡的味道</p>
-<p>看看包装——“蓝山风味”</p>
-<p>那就姑且把这种味道叫<strong>蓝山</strong>好了</p>
-<p>尝尝咖啡也就是图个新鲜，或许也会喜欢上</p>
-<p>但毕竟老是喝四十多的星巴克容易成为阶级敌人</p>
-<p>当然，也容易成为我自己的敌人</p>
-<p>挂耳还是方便，或许比不上手冲那么新鲜，但总比速溶来得健康</p>
-<p>我喝不出什么花样，更喝不出“大师，我悟了”的感受</p>
-<p>就是杯饮料，罢了</p>
+                            <blockquote>
+<p>自己 fork 了别人的 project 之后，当别人更新了，怎么再同步</p>
+</blockquote>
+<h2 id="具体方法">具体方法</h2>
+<h3 id="configuring-a-remote-for-a-fork">Configuring a remote for a fork</h3>
+<ul>
+<li>给 fork 配置一个 remote</li>
+<li>主要使用 <code>git remote -v</code> 查看远程状态。</li>
+</ul>
+<pre><code>git remote -v
+# origin  https://github.com/YOUR_USERNAME/YOUR_FORK.git (fetch)
+# origin  https://github.com/YOUR_USERNAME/YOUR_FORK.git (push)
+</code></pre>
+<ul>
+<li>添加一个将被同步给 fork 远程的上游仓库</li>
+</ul>
+<pre><code>git remote add upstream https://github.com/ORIGINAL_OWNER/ORIGINAL_REPOSITORY.git
+</code></pre>
+<ul>
+<li>再次查看状态确认是否配置成功。</li>
+</ul>
+<pre><code>git remote -v
+# origin    https://github.com/YOUR_USERNAME/YOUR_FORK.git (fetch)
+# origin    https://github.com/YOUR_USERNAME/YOUR_FORK.git (push)
+# upstream  https://github.com/ORIGINAL_OWNER/ORIGINAL_REPOSITORY.git (fetch)
+# upstream  https://github.com/ORIGINAL_OWNER/ORIGINAL_REPOSITORY.git (push)
+</code></pre>
+<h3 id="syncing-a-fork">Syncing a fork</h3>
+<ul>
+<li>从上游仓库 fetch 分支和提交点，传送到本地，并会被存储在一个本地分支 upstream/master<br>
+<code>git fetch upstream</code></li>
+</ul>
+<pre><code>git fetch upstream
+# remote: Counting objects: 75, done.
+# remote: Compressing objects: 100% (53/53), done.
+# remote: Total 62 (delta 27), reused 44 (delta 9)
+# Unpacking objects: 100% (62/62), done.
+# From https://github.com/ORIGINAL_OWNER/ORIGINAL_REPOSITORY
+#  * [new branch]      master     -&gt; upstream/master
+</code></pre>
+<ul>
+<li>切换到本地主分支(如果不在的话)<br>
+<code>git checkout master</code></li>
+</ul>
+<pre><code>git checkout master
+# Switched to branch 'master'
+</code></pre>
+<ul>
+<li>把 upstream/master 分支合并到本地 master 上，这样就完成了同步，并且不会丢掉本地修改的内容。<br>
+<code>git merge upstream/master</code></li>
+</ul>
+<pre><code>git merge upstream/master
+# Updating a422352..5fdff0f
+# Fast-forward
+#  README                    |    9 -------
+#  README.md                 |    7 ++++++
+#  2 files changed, 7 insertions(+), 9 deletions(-)
+#  delete mode 100644 README
+#  create mode 100644 README.md
+</code></pre>
+<ul>
+<li>如果想更新到 GitHub 的 fork 上，直接 <code>git push origin master</code> 就好了。</li>
+</ul>
 
                         </div>
                         
                             <div class="post-toc">
-                                
+                                <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#%E5%85%B7%E4%BD%93%E6%96%B9%E6%B3%95">具体方法</a>
+<ul>
+<li><a href="#configuring-a-remote-for-a-fork">Configuring a remote for a fork</a></li>
+<li><a href="#syncing-a-fork">Syncing a fork</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
                             </div>
                             
                                 
@@ -224,9 +274,9 @@
                                                         <span style="margin-right:15px">
                                                     <i class="post-share"></i>
                                                     <span>Share:</span>
-                                                        <a title="QR Code" target="_blank" href="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://iTb2b.github.io/post/ka-pei/"><i class="fa fa-qrcode"></i></a>
-                                                        <a title="QQ" target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://iTb2b.github.io/post/ka-pei/&sharesource=qzone&title=咖啡&pics=https://iTb2b.github.io/images/avatar.png?v=1589556784846&summary="><i class="fa fa-qq"></i></a>
-                                                        <a title="Weibo" target="_blank" href="https://service.weibo.com/share/share.php?url=https://iTb2b.github.io/post/ka-pei/&sharesource=weibo&title=咖啡 + " - " + &pic="https://iTb2b.github.io/images/avatar.png?v=1589556784846 "><i class="fa fa-weibo "></i></a>
+                                                        <a title="QR Code" target="_blank" href="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://iTb2b.github.io/post/ru-he-tong-bu-yi-ge-fork/"><i class="fa fa-qrcode"></i></a>
+                                                        <a title="QQ" target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://iTb2b.github.io/post/ru-he-tong-bu-yi-ge-fork/&sharesource=qzone&title=如何同步一个 fork&pics=https://iTb2b.github.io/images/avatar.png?v=1589556784846&summary="><i class="fa fa-qq"></i></a>
+                                                        <a title="Weibo" target="_blank" href="https://service.weibo.com/share/share.php?url=https://iTb2b.github.io/post/ru-he-tong-bu-yi-ge-fork/&sharesource=weibo&title=如何同步一个 fork + " - " + &pic="https://iTb2b.github.io/images/avatar.png?v=1589556784846 "><i class="fa fa-weibo "></i></a>
                                                         
                                                                 </span>
                                                                 <!--en-->
@@ -236,8 +286,12 @@
                                                                         <span class="tag ">
                         
                         
-                        <a href="https://iTb2b.github.io/tag/c9I3hpcpM/">#
-                                                肉体和思想总要有一个在路上
+                        <a href="https://iTb2b.github.io/tag/HnwqGDfOf/">#
+                                                Git
+                                                    </a>
+                                                    
+                        <a href="https://iTb2b.github.io/tag/LgTceiTTi/">#
+                                                技术
                                                     </a>
                                                     
                                                         
@@ -253,13 +307,9 @@
                                                                                 <!---->
                                                                                 <section class="post-nav">
                                                                                     
-                                                                                        <a class="prev" rel="prev" href="https://iTb2b.github.io/post/yi-ri-yi-ji-05132020/">
-                                                                                            一日一技 05132020
-                                                                                        </a>
-                                                                                        
                                                                                             
-                                                                                                <a class="next" rel="next" href="https://iTb2b.github.io/post/what-is-velocity-gradient/">
-                                                                                                    What is velocity gradient?
+                                                                                                <a class="next" rel="next" href="https://iTb2b.github.io/post/yi-ri-yi-ji-05132020/">
+                                                                                                    一日一技 05132020
                                                                                                 </a>
                                                                                                 
                                                                                 </section>
