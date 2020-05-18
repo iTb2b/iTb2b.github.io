@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<title>
+    Tao Cheung‘s Blog
+</title>
+<!--[if lt IE 9]><script src="//cdn.bootcss.com/html5shiv/r29/html5.js"></script><![endif]-->
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+<meta http-equiv="x-dns-prefetch-control" content="on">
+<link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+<meta name="author" content="Tao Cheung">
+<meta name="description" content="The living still have many choices, and the dead only die. ♎️">
+<meta name="keywords" content="blog,tennis,productivity">
+<script async src="//instant.page/3.0.0" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/css/style.min.css" />
+<link rel="stylesheet" href="https://iTb2b.github.io/styles/main.css" />
+<link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<script type="text/javascript" src="https://apps.bdimg.com/libs/jquery/1.7.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/script/tocbot.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/script/script.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/script/icon.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@1.0.12/CDN/js/Card/prism.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@1.0.12/CDN/css/Card/prism.min.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.js"></script>
+
+                <script>
+                    (function() {
+                        var bp = document.createElement('script');
+                        var curProtocol = window.location.protocol.split(':')[0];
+                        if (curProtocol === 'https') {
+                            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+                        } else {
+                            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+                        }
+                        var s = document.getElementsByTagName("script")[0];
+                        s.parentNode.insertBefore(bp, s);
+                    })();
+                </script>
+                
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo">
+                <a href="https://iTb2b.github.io">
+                    Tao Cheung‘s Blog
+                </a>
+            </div>
+
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/">
+                        首页
+                    </a>
+                    
+                    <a class="menu-item" href="/archives">
+                        归档
+                    </a>
+                    
+                    <a class="menu-item" href="/tags">
+                        标签
+                    </a>
+                    
+                    <a class="menu-item" href="/post/about">
+                        关于
+                    </a>
+                    
+                        <input id="switch_default" type="checkbox" class="switch_default">
+                        <label for="switch_default" class="toggleBtn"></label>
+            </div>
+            <form id="gridea-search-form" data-update="1589765944621" action="/search/index.html">
+                <input class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
+            </form>
+        </div>
+    </nav>
+
+    
+        <nav class="navbar-mobile" id="nav-mobile">
+            <div class="container">
+                <div class="navbar-header">
+                    <div>
+                        <a href="https://iTb2b.github.io">
+                            Tao Cheung‘s Blog
+                        </a>
+                        <!--en-->
+                        <a id="mobile-toggle-theme-en" class="a en">&nbsp;Dark</a>
+                        <!--zh-->
+                        <a id="mobile-toggle-theme-zh" class="a zh">&nbsp;&#x6697;&#x9ED1;</a>
+                    </div>
+                    <form id="gridea-search-form" data-update="1589765944621" action="/search/index.html">
+                        <input class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
+                    </form>
+                    <!--en-->
+                    <div class="menu-toggle" id="menu-toggle-en" onclick="mobileBtn()">&#9776; Menu</div>
+                    <!--zh-->
+                    <div class="menu-toggle" id="menu-toggle-zh" onclick="mobileBtn()">&#9776; &#x83DC;&#x5355;</div>
+
+                </div>
+                <div class="menu" id="mobile-menu">
+                    
+                        <a class="menu-item" href="/">
+                            首页
+                        </a>
+                        
+                        <a class="menu-item" href="/archives">
+                            归档
+                        </a>
+                        
+                        <a class="menu-item" href="/tags">
+                            标签
+                        </a>
+                        
+                        <a class="menu-item" href="/post/about">
+                            关于
+                        </a>
+                        
+                </div>
+            </div>
+        </nav>
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementById("menu-toggle-en");
+        var toggleMenu_zh = document.getElementById("menu-toggle-zh");
+
+        var mobileMenu = document.getElementById("mobile-menu");
+        if (toggleMenu.display != "none") {
+            if (toggleMenu.classList.contains("active")) {
+                toggleMenu.classList.remove("active")
+                mobileMenu.classList.remove("active")
+            } else {
+                toggleMenu.classList.add("active")
+                mobileMenu.classList.add("active")
+            }
+        } else if (toggleMenu_zh.display != "none") {
+            if (toggleMenu_zh.classList.contains("active")) {
+                toggleMenu_zh.classList.remove("active")
+                mobileMenu.classList.remove("active")
+            } else {
+                toggleMenu_zh.classList.add("active")
+                mobileMenu.classList.add("active")
+            }
+        }
+
+    }
+</script>
+            <div class="main">
+                <div class="container">
+                    <article class="post-wrap">
+                        <header class="post-header">
+                            <h1 class="post-title">
+                                如何用 Markdown 写论文？
+                            </h1>
+                            
+                                <!--en-->
+                                <div class="post-meta en">
+                                    Author:
+                                    <a itemprop="author" rel="author" href="/">
+                                        Tao Cheung‘s Blog
+                                    </a>
+                                    <span class="post-time">
+                                Date: <a href="#">2020-05-18</a>
+                            </span>
+                                    <span class="post-readtime">Reading Time:<a
+                                    href="#">12.2
+                                    mins</a></span>
+                                    <span class="post-words">words:<a href="#">3455</a></span>
+                                    
+                                        <span class="post-category">
+                                Category:
+                                
+                                <a href="https://iTb2b.github.io/tag/Wvi5jHKy8/">markdown</a>
+                                
+                                <a href="https://iTb2b.github.io/tag/h7SbOfM2Q/">转载</a>
+                                
+                                <a href="https://iTb2b.github.io/tag/LgTceiTTi/">技术</a>
+                                
+                                <a href="https://iTb2b.github.io/tag/c9I3hpcpM/">肉体和思想总要有一个在路上</a>
+                                
+                            </span>
+                                        
+                                </div>
+                                
+                        </header>
+                        
+                        <div class="post-content">
+                            <h1 id="如何用-markdown-写论文">如何用 Markdown 写论文？</h1>
+<p><a href="https://sspai.com/u/a5xddvxl/updates">玉树芝兰</a></p>
+<p>本文用简明的样例，介绍如何使用Markdown和自动化工具帮你处理数学公式、参考文献引用、图片交叉索引等学术论文写作中常见的棘手问题。快来试试吧。</p>
+<figure data-type="image" tabindex="1"><img src="https://i.loli.net/2019/01/19/5c41faee28d5a.jpg?imageView2/2/w/1120/q/90/interlace/1/ignore-error/1" alt="img" loading="lazy"></figure>
+<h1 id="苦恼">苦恼</h1>
+<p>自从我学会了如何在数字文档上用红笔写写画画，跟学生合写文章和指导毕业论文的工作就变得轻松多了。</p>
+<figure data-type="image" tabindex="2"><img src="https://i.loli.net/2019/01/19/5c41faf19f1fd.png?imageView2/2/w/1120/q/90/interlace/1/ignore-error/1" alt="img" loading="lazy"></figure>
+<p>有的部分，学生会很快改完反馈给我。但是我发现每次对引言和文献综述部分做出调整要求，学生们的反馈都非常慢。</p>
+<p>有的时候，学生甚至会求饶，“老师，参考文献顺序能不能不动？或者全文都确定下来再统一做？每次调整一个，就需要很长时间！”</p>
+<p>我一时惊愕，为什么需要那么久？</p>
+<p>后来才明白，他们居然是在word中一条条<strong>手动插入</strong>尾注，来引用参考文献的。尾注的内容有的直接搬过来，有的手动输入，结果参考文献列表的格式“丰富多彩”——有的信息不全，有的格式根本就不符合GB/T 7714-2015的规范。</p>
+<p>在我的帮助下，许多学生学会了使用NoteExpress, Endnote, Zotero和Mendeley等工具，用自动化方式管理和引用参考文献。</p>
+<p>但即便是这样，效率依然不够高。尤其是跟别人协作的时候，参考文献引用的修改就成了噩梦。</p>
+<p>你可能需要每次都把Mendeley或者Zotero的文献库同步给对方，否则自动生成的引用标记就容易乱掉。</p>
+<p>写作学术论文时，你还不得不时常面对图表交叉引用、数学公式和脚注等问题。如果方法不当，会把宝贵的时间和注意力耗散掉，劳而无功。</p>
+<p>Word编辑器用来写学术论文，可能真的<strong>并不是最优</strong>方案。</p>
+<p>但是没办法，国内学术界，尤其是人文社科领域，目前投稿模板还主要是Word的。</p>
+<p>好消息是，即便是形成Word文稿，效率也是可挖掘的。</p>
+<p>我平时写作学术论文的时候，用的依然是让人喜欢的标记语言——Markdown。对，你没听错，它不光可以帮你写公众号、做幻灯，也可以写论文哦。</p>
+<p>通过本文，我把自己用Markdown写作学术论文的流程分享给你。希望看过之后，能帮助你提升效率，带来更多愉悦的写作体验。</p>
+<h1 id="方案">方案</h1>
+<p>我的方案，是采用Markdown来写作内容。然后用文档格式处理界的瑞士军刀Pandoc，把内容转换成Word格式。</p>
+<p>Pandoc实在是<strong>黑科技</strong>。我曾经用它给你演示了<a href="http://www.jianshu.com/p/f274cad20914">如何把思维导图秒变成幻灯</a>。还记得其中这张图吗？</p>
+<figure data-type="image" tabindex="3"><img src="https://i.loli.net/2019/01/19/5c41faf40e9d4.jpg?imageView2/2/w/1120/q/90/interlace/1/ignore-error/1" alt="img" loading="lazy"></figure>
+<p>图中每一个节点，都是Pandoc支持的一种文档格式。Markdown, Docx, PDF, LaTeX, ePub, HTML …… 基本上涵盖了我们常见的发布格式需求。</p>
+<p>一次写作，多种格式发布。听起来是不是很兴奋呢？</p>
+<p>要使用这一方案，我们需要安装一些必要的工具。这就开始吧。</p>
+<h1 id="环境">环境</h1>
+<p>我们需要安装以下几样东西：</p>
+<ul>
+<li>Python 运行环境；</li>
+<li>Pandoc；</li>
+<li>Atom编辑器；</li>
+<li>样例文件夹。</li>
+</ul>
+<p>下面我们一一介绍安装方法和注意事项。</p>
+<h2 id="python环境">Python环境</h2>
+<p>我们的演示中，需要用到pip等Python环境工具。最简便的方法是安装Anaconda套装，这样就不必对各种组件一一手动调整安装了。</p>
+<p>请到<a href="https://www.continuum.io/downloads">这个网址</a> 下载最新版的Anaconda。下拉页面，找到下载位置。根据你目前使用的系统，网站会自动推荐给你适合的版本下载。我使用的是macOS，下载文件格式为pkg。</p>
+<figure data-type="image" tabindex="4"><img src="https://i.loli.net/2019/01/19/5c41faf6e0283.png?imageView2/2/w/1120/q/90/interlace/1/ignore-error/1" alt="img" loading="lazy"></figure>
+<p>下载页面区左侧是Python 3.6版，右侧是2.7版。请选择2.7版本。</p>
+<p>双击下载后的pkg文件，根据中文提示一步步安装即可。</p>
+<figure data-type="image" tabindex="5"><img src="https://i.loli.net/2019/01/19/5c41faf9548eb.png?imageView2/2/w/1120/q/90/interlace/1/ignore-error/1" alt="img" loading="lazy"></figure>
+<h2 id="pandoc">Pandoc</h2>
+<p>请到<a href="https://github.com/jgm/pandoc/releases/tag/1.19.2.1">这个网址</a>下载Pandoc。</p>
+<figure data-type="image" tabindex="6"><img src="https://i.loli.net/2019/01/19/5c41fafc13a01.png?imageView2/2/w/1120/q/90/interlace/1/ignore-error/1" alt="img" loading="lazy"></figure>
+<p>根据你的操作系统，下载对应的版本。我在macOS下，需要下载其中的<a href="https://github.com/jgm/pandoc/releases/download/1.19.2.1/pandoc-1.19.2.1-osx.pkg">pkg扩展名安装包</a>，双击安装。</p>
+<p>为了处理图形的交叉引用，我们需要添加一个pandoc插件。</p>
+<p>在终端（macOS, Linux）或者命令行（Windows）下，执行：</p>
+<pre><code>pip install pandoc-fignos
+</code></pre>
+<p>正常安装后，pandoc就算准备好了。</p>
+<h2 id="atom编辑器">Atom编辑器</h2>
+<p>请到<a href="https://atom.io/">这个地址</a>下载Atom编辑器。网站会根据你的操作系统，自动找到对应的版本供你下载。</p>
+<figure data-type="image" tabindex="7"><img src="https://i.loli.net/2019/01/19/5c41fb000f94e.png?imageView2/2/w/1120/q/90/interlace/1/ignore-error/1" alt="img" loading="lazy"></figure>
+<p>因为我用的是macOS，所以这里网站提供的是苹果版本Atom。</p>
+<p>下载之后，安装运行。然后你需要安装1个插件，帮你预览Markdown，叫做<a href="https://atom.io/packages/markdown-preview-enhanced">markdown-preview-enhanced</a>。</p>
+<p>安装方法如下：</p>
+<p>使用<code>Cmd + ,</code>呼叫配置菜单。注意我这里说的是苹果系统macOS上的操作。如果你用的是Windows，请把所有出现的Cmd按键替换为Ctrl按键，或者查阅帮助文档。</p>
+<figure data-type="image" tabindex="8"><img src="https://i.loli.net/2019/01/19/5c41fb0332614.png?imageView2/2/w/1120/q/90/interlace/1/ignore-error/1" alt="img" loading="lazy"></figure>
+<p>选择左侧边栏的最后一项+号，用于安装新的插件。</p>
+<figure data-type="image" tabindex="9"><img src="https://i.loli.net/2019/01/19/5c41fb062e83e.png?imageView2/2/w/1120/q/90/interlace/1/ignore-error/1" alt="img" loading="lazy"></figure>
+<p>在搜索框中输入该插件的名字：<code>markdown-preview-enhanced</code>，点击搜索结果中该插件的Install按钮。</p>
+<p>很快，插件安装好了。</p>
+<figure data-type="image" tabindex="10"><img src="https://i.loli.net/2019/01/19/5c41fb087a986.png?imageView2/2/w/1120/q/90/interlace/1/ignore-error/1" alt="img" loading="lazy"></figure>
+<p>这样，我们就可以实时查看Markdown的预览效果了。</p>
+<h2 id="样例文件夹">样例文件夹</h2>
+<p>我专门为这篇教程，准备了一个github项目。</p>
+<p>请从<a href="https://github.com/wshuyi/demo-scholar-markdown-docx/archive/master.zip">这个位置</a>，下载压缩包，之后解压。</p>
+<figure data-type="image" tabindex="11"><img src="https://i.loli.net/2019/01/19/5c41fb18b9305.png?imageView2/2/w/1120/q/90/interlace/1/ignore-error/1" alt="img" loading="lazy"></figure>
+<p>把其中的demo.md文件拖动到Atom编辑器中，就可以正式开始我们的探索之旅了。</p>
+<h1 id="基础版本">基础版本</h1>
+<p>Atom编辑器里，demo.md文件显示如下。</p>
+<figure data-type="image" tabindex="12"><img src="https://i.loli.net/2019/01/19/5c41fb1af2b7c.jpg?imageView2/2/w/1120/q/90/interlace/1/ignore-error/1" alt="img" loading="lazy"></figure>
+<p>左侧是Markdown源代码，对应的预览效果在右侧显示。</p>
+<p>这里我们只包含了最简单的文本和图片。图片在我们刚刚下载文件夹的<code>/assets</code>子目录中。</p>
+<p>到终端下，采用cd命令进入咱们的演示文件夹（我的在<code>~/Downloads/demo-scholar-markdown-docx-master</code>），执行：</p>
+<pre><code>pandoc demo.md -o demo.docx
+</code></pre>
+<p>可以看到，当前文件夹下，生成了demo.docx文件。</p>
+<p>打开Word文件，内容是这样的：</p>
+<figure data-type="image" tabindex="13"><img src="https://i.loli.net/2019/01/19/5c41fb1d1b8bb.jpg?imageView2/2/w/1120/q/40/interlace/1/ignore-error/1" alt="img" loading="lazy"></figure>
+<p>基础版本的格式转换，就是这么简单。下面我们就要添加一些内容，让文稿变得愈加有学术色彩。</p>
+<h1 id="数学公式">数学公式</h1>
+<p>我们尝试插入数学公式。</p>
+<p>在Markdown下，可以直接使用LaTeX数学公式。你只需要负责键入符号，Pandoc负责将其转换成漂亮的公式显示在Word中。</p>
+<p>如果你对LaTeX数学公式的输入不是很熟悉，不要紧，<a href="https://reu.dimacs.rutgers.edu/Symbols.pdf">这里有个小抄</a>（cheatsheet），你可以参考。</p>
+<p>我们打开demo-math.md，可以看到这次除了刚刚的内容，还增加了一个新的部分，叫做“数学公式”。</p>
+<p>内含一个经典物理学公式，还有相应的变量解释。</p>
+<figure data-type="image" tabindex="14"><img src="https://i.loli.net/2019/01/19/5c41fb1f39ef8.jpg?imageView2/2/w/1120/q/40/interlace/1/ignore-error/1" alt="img" loading="lazy"></figure>
+<p>在右侧预览区里面，我们看到了公式预览的效果。</p>
+<p>回到终端下执行：</p>
+<pre><code>pandoc demo-math.md -o demo-math.docx
+</code></pre>
+<p>这次生成的docx文件如下图所示：</p>
+<figure data-type="image" tabindex="15"><img src="https://i.loli.net/2019/01/19/5c41fb21a5f35.jpg?imageView2/2/w/1120/q/40/interlace/1/ignore-error/1" alt="img" loading="lazy"></figure>
+<p>转换后的word文件里，不论是独立公式，还是行内数学符号，都显示正常。</p>
+<h1 id="脚注">脚注</h1>
+<p>写学术论文的时候，经常需要加入脚注。例如在首页需要添加作者和基金支持信息之类。咱们也尝试在本部分加入对应内容。</p>
+<p>打开<code>demo-footnote.md</code>，对比一下添加了哪些信息。</p>
+<figure data-type="image" tabindex="16"><img src="https://i.loli.net/2019/01/19/5c41fb240907c.jpg?imageView2/2/w/1120/q/40/interlace/1/ignore-error/1" alt="img" loading="lazy"></figure>
+<p>脚注用<code>[^1]</code>来表示。内容用同样的符号，后接冒号，然后填写具体信息。</p>
+<p>这次的预览中，我们看到了脚注的标注，但是脚注内容哪儿去了？</p>
+<p>别担心，拖拽右侧的预览窗口，我们就能看到脚注了。</p>
+<figure data-type="image" tabindex="17"><img src="https://i.loli.net/2019/01/19/5c41fb265c770.jpg?imageView2/2/w/1120/q/40/interlace/1/ignore-error/1" alt="img" loading="lazy"></figure>
+<p>但是转换成word后，这脚注还在第一页吗？</p>
+<p>我们到终端下，执行pandoc命令：</p>
+<pre><code>pandoc demo-footnote.md -o demo-footnote.docx
+</code></pre>
+<figure data-type="image" tabindex="18"><img src="https://i.loli.net/2019/01/19/5c41fb2881736.jpg?imageView2/2/w/1120/q/40/interlace/1/ignore-error/1" alt="img" loading="lazy"></figure>
+<p>脚注如同我们需要的那样，显示在了首页底部。本部分测试成功。</p>
+<h1 id="文献引用">文献引用</h1>
+<p>下面我们进入关键阶段——文献引用了。</p>
+<p>我们打开百度学术，找几篇跟大数据特性相关的文献。</p>
+<figure data-type="image" tabindex="19"><img src="https://i.loli.net/2019/01/19/5c41fb2b588f1.png?imageView2/2/w/1120/q/40/interlace/1/ignore-error/1" alt="img" loading="lazy"></figure>
+<p>键入检索主题词“大数据+3V+5V”，搜索后的结果如下：</p>
+<figure data-type="image" tabindex="20"><img src="https://i.loli.net/2019/01/19/5c41fb2ea9e54.png?imageView2/2/w/1120/q/40/interlace/1/ignore-error/1" alt="img" loading="lazy"></figure>
+<p>点开第一篇，我们看看内容。</p>
+<figure data-type="image" tabindex="21"><img src="https://i.loli.net/2019/01/19/5c41fb3f2557e.png?imageView2/2/w/1120/q/40/interlace/1/ignore-error/1" alt="img" loading="lazy"></figure>
+<p>页面下方有全文链接，我们选择知网。</p>
+<figure data-type="image" tabindex="22"><img src="https://i.loli.net/2019/01/19/5c41fb425051c.png?imageView2/2/w/1120/q/40/interlace/1/ignore-error/1" alt="img" loading="lazy"></figure>
+<p>点击PDF下载，查看全文。其中包含以下内容，跟咱们这篇文稿的主题相关。</p>
+<figure data-type="image" tabindex="23"><img src="https://i.loli.net/2019/01/19/5c41fb44c847b.jpg?imageView2/2/w/1120/q/40/interlace/1/ignore-error/1" alt="img" loading="lazy"></figure>
+<p>我们决定引用这篇参考文献。</p>
+<p>回到百度学术的页面，点击引用按钮。</p>
+<figure data-type="image" tabindex="24"><img src="https://i.loli.net/2019/01/19/5c41fb4810bd3.png?imageView2/2/w/1120/q/40/interlace/1/ignore-error/1" alt="img" loading="lazy"></figure>
+<p>在弹出页面中，点击下方蓝色的“BibTex”。</p>
+<figure data-type="image" tabindex="25"><img src="https://i.loli.net/2019/01/19/5c41fb4a7cd6e.png?imageView2/2/w/1120/q/40/interlace/1/ignore-error/1" alt="img" loading="lazy"></figure>
+<p>如上图所示，该文献的Bibtex信息就是这样的一段文本。我们将其拷贝下来，存储到<code>.bib</code>文件里。</p>
+<p>依此类推，我们再下载其他两份文献的Bibtex信息。</p>
+<p>你可以打开演示目录内的<code>myref.bib</code>文件查看，内容如下图所示：</p>
+<figure data-type="image" tabindex="26"><img src="https://i.loli.net/2019/01/19/5c41fb4ce2312.jpg?imageView2/2/w/1120/q/40/interlace/1/ignore-error/1" alt="img" loading="lazy"></figure>
+<p>下面我们就要引用这些文献了。</p>
+<p>打开demo-citation.md。</p>
+<figure data-type="image" tabindex="27"><img src="https://i.loli.net/2019/01/19/5c41fb4f75ac5.jpg?imageView2/2/w/1120/q/40/interlace/1/ignore-error/1" alt="img" loading="lazy"></figure>
+<p>引用的时候，我们使用Bibtex中每条文献信息大括号内的第一个字段，前面加上<code>@</code>符号，用方括号扩起来。需要引用多条文献的时候，在方括号内，对不同文献标记用分号区隔。</p>
+<p>我们很容易就发现，参考文献的预览信息是不正确的。</p>
+<p>下面我们看看Pandoc能否帮助我们将其转换成为正确的Word内容。</p>
+<p>注意这次需要使用的参数比较多。因为我们不光需要指定参考文献的格式，还得告诉Pandoc，参考文献数据存储在了哪里（<code>myref.bib</code>）。</p>
+<pre><code>pandoc --filter pandoc-citeproc --bibliography=myref.bib --csl=chinese-gb7714-2005-numeric.csl demo-citation.md -o demo-citation.docx
+</code></pre>
+<p>打开转换后的word，看看效果。</p>
+<figure data-type="image" tabindex="28"><img src="https://i.loli.net/2019/01/19/5c41fb5196793.jpg?imageView2/2/w/1120/q/40/interlace/1/ignore-error/1" alt="img" loading="lazy"></figure>
+<p>Pandoc正确地帮我们把文献的引用标记信息转换成为了上角标，根据出现的顺序自动编排序号。对于多个文献的引用情况，也做了对应的处理。</p>
+<p>参考文献列表呢？</p>
+<p>我们翻动页面到文末。</p>
+<figure data-type="image" tabindex="29"><img src="https://i.loli.net/2019/01/19/5c41fb5411f97.jpg?imageView2/2/w/1120/q/40/interlace/1/ignore-error/1" alt="img" loading="lazy"></figure>
+<p>参考文献列表已经根据GB/T 7714-2015的规范自动生成。</p>
+<p>将来无论是对文献引用作增删、移动、修改，都可以通过执行上面的一条命令自动更新。非常方便。</p>
+<h1 id="图片引用">图片引用</h1>
+<p>写作长篇学术论文（例如毕业论文）时，图片可能会有很多。引用起来如果手动编号，将来插入新的图片，就得手动重排许多后续内容，很麻烦。</p>
+<p>下面我们尝试在Markdown里插入图片标题，并且在文中作交叉引用。</p>
+<p>请打开<code>demo-figref.md</code>，内容如下：</p>
+<figure data-type="image" tabindex="30"><img src="https://i.loli.net/2019/01/19/5c41fb56b763b.jpg?imageView2/2/w/1120/q/40/interlace/1/ignore-error/1" alt="img" loading="lazy"></figure>
+<p>注意这里图片使用时，加入了一些新的信息。前面的方括号里面，加上了图标题；后面的大括号，使用<code>#fig:id</code>的方式，加入了图的标记。</p>
+<p>引用的时候，采用<code>{@fig:id}</code>的方式，分别引用每个图形。</p>
+<p>注意右侧的预览区，图标记都是原封不动显示的。</p>
+<p>为了能够让图片引用的时候使用“图”，而不是“Figure”，我们在文件首部插入4行内容：</p>
+<pre><code>---
+fignos-cleveref: On
+fignos-plus-name: 图
+…
+</code></pre>
+<p>预览中，这部分也出现在了文章首部，很难看。</p>
+<figure data-type="image" tabindex="31"><img src="https://i.loli.net/2019/01/19/5c41fb65a67d5.jpg?imageView2/2/w/1120/q/40/interlace/1/ignore-error/1" alt="img" loading="lazy"></figure>
+<p>我们执行以下的pandoc命令，注意此次加入了图片引用处理要求。</p>
+<pre><code>pandoc --filter pandoc-fignos --filter pandoc-citeproc --bibliography=myref.bib --csl=chinese-gb7714-2005-numeric.csl demo-figref.md -o demo-figref.docx
+</code></pre>
+<p>这次生成的Word里面，图片自动加上了编号。</p>
+<figure data-type="image" tabindex="32"><img src="https://i.loli.net/2019/01/19/5c41fb67e288f.jpg?imageView2/2/w/1120/q/40/interlace/1/ignore-error/1" alt="img" loading="lazy"></figure>
+<p>第二张图，序号也符合我们的预期。</p>
+<figure data-type="image" tabindex="33"><img src="https://i.loli.net/2019/01/19/5c41fb6a235bb.jpg?imageView2/2/w/1120/q/40/interlace/1/ignore-error/1" alt="img" loading="lazy"></figure>
+<p>注意，目前这个图片自动编号的功能对于中文支持还有些问题。例如标题中依然显示为“Figure”，而非我们想要的“图”。不过我们只需要调整替换图标题即可，所有的引用都是正常的。</p>
+<p>如果你的学术论文里面有数十或上百张图片，你会立即体会到这种引用方式的好处。</p>
+<h1 id="小结">小结</h1>
+<p>本文我们用一个最小化的样例，介绍了如何在学术论文写作时，利用Markdown和Pandoc处理以下格式信息：</p>
+<ul>
+<li>数学公式；</li>
+<li>脚注；</li>
+<li>文献引用；</li>
+<li>图片引用。</li>
+</ul>
+<p>此时再来看我们生成的Word文稿，已经变成了这个样子：</p>
+<figure data-type="image" tabindex="34"><img src="https://i.loli.net/2019/01/19/5c41fb6c9049f.jpg?imageView2/2/w/1120/q/40/interlace/1/ignore-error/1" alt="img" loading="lazy"></figure>
+<p>是不是很有成就感呢？</p>
+<p>举一反三，你也可以把这些技巧和方法应用于其他学术文稿的写作中，它们包括而不限于开题报告、结项报告，甚至是科研项目申请书。</p>
+<p>希望这些展示，能对你写作学术文稿效率的提升，起到促进作用。</p>
+<h1 id="讨论">讨论</h1>
+<p>你平时经常写学术论文吗？用的是什么工具？效率如何？除了本文介绍的方法外，有没有更好的工具和流程推荐给大家？欢迎留言，分享你的思考和经验，我们一起交流讨论。</p>
+<p>如果你对我的文章感兴趣，欢迎点赞，并且关注我的专栏，以便收到后续作品更新通知。</p>
+<p>如果本文可能对你身边的亲友有帮助，也欢迎你把本文通过微博或朋友圈分享给他们。让他们一起参与到我们的讨论中来。本文用简明的样例，介绍如何使用Markdown和自动化工具帮你处理数学公式、参考文献引用、图片交叉索引等学术论文写作中常见的棘手问题。快来试试吧。</p>
+<h1 id="我说">我说</h1>
+<p>文章较长，但是脉络比较清晰。</p>
+<p>值得一提的是，可以简单的使用 <strong>typora</strong>，对新手更友好，且直接支持 <strong>pandoc</strong>。</p>
+
+                        </div>
+                        
+                            <div class="post-toc">
+                                <ul class="markdownIt-TOC">
+<li><a href="#%E5%A6%82%E4%BD%95%E7%94%A8-markdown-%E5%86%99%E8%AE%BA%E6%96%87">如何用 Markdown 写论文？</a></li>
+<li><a href="#%E8%8B%A6%E6%81%BC">苦恼</a></li>
+<li><a href="#%E6%96%B9%E6%A1%88">方案</a></li>
+<li><a href="#%E7%8E%AF%E5%A2%83">环境</a>
+<ul>
+<li><a href="#python%E7%8E%AF%E5%A2%83">Python环境</a></li>
+<li><a href="#pandoc">Pandoc</a></li>
+<li><a href="#atom%E7%BC%96%E8%BE%91%E5%99%A8">Atom编辑器</a></li>
+<li><a href="#%E6%A0%B7%E4%BE%8B%E6%96%87%E4%BB%B6%E5%A4%B9">样例文件夹</a></li>
+</ul>
+</li>
+<li><a href="#%E5%9F%BA%E7%A1%80%E7%89%88%E6%9C%AC">基础版本</a></li>
+<li><a href="#%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F">数学公式</a></li>
+<li><a href="#%E8%84%9A%E6%B3%A8">脚注</a></li>
+<li><a href="#%E6%96%87%E7%8C%AE%E5%BC%95%E7%94%A8">文献引用</a></li>
+<li><a href="#%E5%9B%BE%E7%89%87%E5%BC%95%E7%94%A8">图片引用</a></li>
+<li><a href="#%E5%B0%8F%E7%BB%93">小结</a></li>
+<li><a href="#%E8%AE%A8%E8%AE%BA">讨论</a></li>
+<li><a href="#%E6%88%91%E8%AF%B4">我说</a></li>
+</ul>
+
+                            </div>
+                            
+                                
+                                                    
+                                                        <!-- Share-->
+                                                        <span style="margin-right:15px">
+                                                    <i class="post-share"></i>
+                                                    <span>Share:</span>
+                                                        <a title="QR Code" target="_blank" href="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://iTb2b.github.io/post/ru-he-yong-markdown-xie-lun-wen/"><i class="fa fa-qrcode"></i></a>
+                                                        <a title="QQ" target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://iTb2b.github.io/post/ru-he-yong-markdown-xie-lun-wen/&sharesource=qzone&title=如何用 Markdown 写论文？&pics=https://iTb2b.github.io/images/avatar.png?v=1589765944621&summary="><i class="fa fa-qq"></i></a>
+                                                        <a title="Weibo" target="_blank" href="https://service.weibo.com/share/share.php?url=https://iTb2b.github.io/post/ru-he-yong-markdown-xie-lun-wen/&sharesource=weibo&title=如何用 Markdown 写论文？ + " - " + &pic="https://iTb2b.github.io/images/avatar.png?v=1589765944621 "><i class="fa fa-weibo "></i></a>
+                                                        
+                                                                </span>
+                                                                <!--en-->
+                                                                <section class="post-tags en ">
+                                                                    <div>
+                                                                        <span>Tag(s):</span>
+                                                                        <span class="tag ">
+                        
+                        
+                        <a href="https://iTb2b.github.io/tag/Wvi5jHKy8/">#
+                                                markdown
+                                                    </a>
+                                                    
+                        <a href="https://iTb2b.github.io/tag/h7SbOfM2Q/">#
+                                                转载
+                                                    </a>
+                                                    
+                        <a href="https://iTb2b.github.io/tag/LgTceiTTi/">#
+                                                技术
+                                                    </a>
+                                                    
+                        <a href="https://iTb2b.github.io/tag/c9I3hpcpM/">#
+                                                肉体和思想总要有一个在路上
+                                                    </a>
+                                                    
+                                                        
+                                                            </span>
+                                                                    </div>
+                                                                    <div>
+                                                                        <a href="javascript:window.history.back();">back</a>
+                                                                        <span>&dot;</span>
+                                                                        <a href="#">home</a>
+                                                                    </div>
+                                                                </section>
+                                                                
+                                                                                <!---->
+                                                                                <section class="post-nav">
+                                                                                    
+                                                                                            
+                                                                                                <a class="next" rel="next" href="https://iTb2b.github.io/post/ru-he-tong-bu-yi-ge-fork/">
+                                                                                                    如何同步一个 fork
+                                                                                                </a>
+                                                                                                
+                                                                                </section>
+                    </article>
+                </div>
+                
+                                            
+            </div>
+    </div>
+    </div>
+    </div>
+    
+        <footer id="footer" class="footer">
+            <div class="copyright">
+                
+                        
+                            
+                                <b id="hitokoto"></b><br>
+                                
+                                        <svg viewBox="0 0 1024 1024" style="margin-left: 5px;margin-right: 5px;" version="1.0" width="8" height="8" class="my-face">
+            <path
+                d="M863.597631 513.574282l-271.33965-140.213484L729.783667 81.926656c3.583731-7.87141 7.167462-15.742819 7.167462-25.214109C736.887134 25.226908 708.345275 0.012799 672.635953 0.012799a63.611229 63.611229 0 0 0-39.293053 12.607055c-1.791866 1.59988-3.519736 3.19976-5.311602 3.19976L147.87531 418.925381a55.547834 55.547834 0 0 0-19.646527 47.356448c1.791866 17.278704 14.27093 33.021523 32.125591 42.492813l271.33965 141.749369L292.504463 945.221908c-12.479064 25.214109-1.791866 53.563983 23.166262 69.306802 10.751194 6.335525 23.230258 9.47129 35.709322 9.47129 16.062795 0 32.125591-4.735645 44.604655-15.742819l480.091993-403.297753a55.547834 55.547834 0 0 0 19.646526-47.228458 61.243407 61.243407 0 0 0-32.12559-44.156688z"
+                fill="#93b5cf"></path>
+        </svg>
+                                        Tao Cheung‘s Blog &copy;Copyright
+                                            <script>
+                                                var date = new Date();
+                                                document.write("" + date.getFullYear());
+                                            </script>
+                                            | Powered by
+                                            <a href="TaoCheung.me" target="_blank">
+                                                TaoCheung.me
+                                            </a>
+            </div>
+            <div id="update" style="display:none;">
+                on
+            </div>
+            
+                <div id="version" style="display:none;">
+                    1.7.4
+                </div>
+                
+                    <script>
+                        var pat = '';
+                        
+                        document.write('<div id="home_path" style="display:none;">' + document.location.protocol + '//' + window.document.location.hostname + pat + '</div>')
+                    </script>
+        </footer>
+        
+                <script>
+                    
+                    
+                    
+                    hitokoto();
+                    
+                    getStar();
+                    hljs.initHighlighting();
+                    console.clear();
+                    
+                    CheckVersion();
+                    
+                    var newDate = new Date();
+                    newDate.setTime(1589765944621);
+                    console.log(" Blog Update Time: " + newDate.toLocaleDateString());
+                    console.log("\n %c \u26a1Theme:Chic Author's Blog:https://blog.itjoker.cn  Write By ITJoker  \n\n", "color: #ffffff; background: rgba(49, 49, 49, 0.85); padding:5px 0;border-radius:5px;");
+                </script>
+                
+        </div>
+</body>
+<script>
+    scroll();
+</script>
+
+</html>
