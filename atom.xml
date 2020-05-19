@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://iTb2b.github.io</id>
     <title>Tao Cheung‘s Blog</title>
-    <updated>2020-05-18T01:51:29.009Z</updated>
+    <updated>2020-05-19T12:15:26.085Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://iTb2b.github.io"/>
     <link rel="self" href="https://iTb2b.github.io/atom.xml"/>
@@ -10,6 +10,27 @@
     <logo>https://iTb2b.github.io/images/avatar.png</logo>
     <icon>https://iTb2b.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, Tao Cheung‘s Blog</rights>
+    <entry>
+        <title type="html"><![CDATA[macOS 如何在合上盖子的时候保持不进入睡眠？]]></title>
+        <id>https://iTb2b.github.io/post/macos-ru-he-zai-he-shang-gai-zi-de-shi-hou-bao-chi-bu-jin-ru-shui-mian/</id>
+        <link href="https://iTb2b.github.io/post/macos-ru-he-zai-he-shang-gai-zi-de-shi-hou-bao-chi-bu-jin-ru-shui-mian/">
+        </link>
+        <updated>2020-05-19T12:14:29.000Z</updated>
+        <content type="html"><![CDATA[<h1 id="macos-如何在合上盖子的时候保持不进入睡眠">macOS 如何在合上盖子的时候保持不进入睡眠？</h1>
+<p>给它喝咖啡（注射咖啡因）</p>
+<p>在终端当中输入</p>
+<pre><code class="language-text">caffeinate -t 3600
+</code></pre>
+<p>就可以让它保持一小时清醒。（3600）秒。</p>
+<p>或者，先输入</p>
+<pre><code class="language-text">ps uxa
+</code></pre>
+<p>查看需要保持运行的进程的进程号，然后</p>
+<pre><code class="language-text">caffeinate -w &lt;进程号&gt;
+</code></pre>
+<p>就可以等待到这个进程结束。</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[如何用 Markdown 写论文？]]></title>
         <id>https://iTb2b.github.io/post/ru-he-yong-markdown-xie-lun-wen/</id>
@@ -686,33 +707,6 @@ Changes to be committed:
 <p>此时工作区很干净</p>
 <figure data-type="image" tabindex="3"><img src="https://tva1.sinaimg.cn/large/00831rSTly1gdp3ow0p65j30cv06iq32.jpg" alt="git-stage-after-commit" loading="lazy"></figure>
 <p>暂存区中没有内容了</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[1.Introduction to iOS 11, Xcode9 and Swift4]]></title>
-        <id>https://iTb2b.github.io/post/1introduction-to-ios-11-xcode9-and-swift4/</id>
-        <link href="https://iTb2b.github.io/post/1introduction-to-ios-11-xcode9-and-swift4/">
-        </link>
-        <updated>2020-04-03T10:28:44.000Z</updated>
-        <content type="html"><![CDATA[<blockquote>
-<p>This course is from Stanford University's CS193p (Developing Applications for iOS) Fall 2017-18 (based on iOS 11 and Swift 4)</p>
-</blockquote>
-<p>Click <a href="%22http://web.stanford.edu/class/cs193p/cgi-bin/drupal/%22">here</a> for visiting the website.</p>
-<h1 id="创建项目">创建项目</h1>
-<h3 id="目录创建">目录创建</h3>
-<p>taocheung/Developer/</p>
-<h3 id="organization-name">Organization Name</h3>
-<p>公司名称、组织名称</p>
-<h3 id="organization-identifier">Organization Identifier</h3>
-<p>公司的唯一标识<br>
-一般是公司域名的反写，比如me.taocheung</p>
-<h3 id="bundle-identifier">Bundle Identifier</h3>
-<p>软件的唯一标识<br>
-一般是Organization Identifier + Product Name</p>
-<h1 id="开发之前">开发之前</h1>
-<p>Xcode11 相对于之前版本做出了非常大的改变，要查找的东西很多</p>
-<p>快捷键</p>
-<p><code>Cmd + shift + L</code> 打开控件库</p>
 ]]></content>
     </entry>
 </feed>
