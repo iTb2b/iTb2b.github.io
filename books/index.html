@@ -1,10 +1,9 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-
-<head>
+  <head>
     <meta charset="utf-8" />
 <title>
-    Tao Cheung‘s Blog
+    我的阅读 | Tao Cheung‘s Blog
 </title>
 <!--[if lt IE 9]><script src="//cdn.bootcss.com/html5shiv/r29/html5.js"></script><![endif]-->
 <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
@@ -40,10 +39,12 @@
                     })();
                 </script>
                 
-</head>
-
-<body>
-    <div class="wrapper">
+    <meta name="referrer" content="never">
+    <link rel="stylesheet" href="https://iTb2b.github.io/media/js/Bmdb.min.css">
+  </head>
+  <body>
+    <!-- start: #wrapper -->
+    <header id="header" style="">
         <header>
     <nav class="navbar">
         <div class="container">
@@ -174,93 +175,45 @@
 
     }
 </script>
-            <div class="main">
-                <div class="container">
-                    <div class="post-wrap archive">
-                        
-                            
-                                <h3>
-                                    2020
-                                </h3>
-                                
-                                    
+    </header>
+    <div class="wrapper">
+        <div class="content">
+            <div id="posts" class="posts">
+            <!-- start: .articles -->
+            <article class="post hentry format-daily" style="margin-top:3em;">
+                <h1 class="entry-title">
+                   我的阅读
+                </h1>
+                <div class="post-content" style="margin:0 auto;width:80%;padding:1em 0"></div>
+            </article>
 
-                                        <article class="archive-item">
-                                            <a class="archive-item-link" href="https://iTb2b.github.io/post/ru-he-yong-markdown-xie-lun-wen/">
-                                                如何用 Markdown 写论文？
-                                            </a>
-                                            <span class="archive-item-date">2020-05-18 </span>
-                                        </article>
-                                        
-                                            
-                                                
-                    </div>
-                    <div class="pagination-container">
-                        
-                                                
-                                                        
-                                                                
-                    </div>
-                </div>
             </div>
-    </div>
     
-        <footer id="footer" class="footer">
-            <div class="copyright">
-                
-                        
-                            
-                                <b id="hitokoto"></b><br>
-                                
-                                        <svg viewBox="0 0 1024 1024" style="margin-left: 5px;margin-right: 5px;" version="1.0" width="8" height="8" class="my-face">
-            <path
-                d="M863.597631 513.574282l-271.33965-140.213484L729.783667 81.926656c3.583731-7.87141 7.167462-15.742819 7.167462-25.214109C736.887134 25.226908 708.345275 0.012799 672.635953 0.012799a63.611229 63.611229 0 0 0-39.293053 12.607055c-1.791866 1.59988-3.519736 3.19976-5.311602 3.19976L147.87531 418.925381a55.547834 55.547834 0 0 0-19.646527 47.356448c1.791866 17.278704 14.27093 33.021523 32.125591 42.492813l271.33965 141.749369L292.504463 945.221908c-12.479064 25.214109-1.791866 53.563983 23.166262 69.306802 10.751194 6.335525 23.230258 9.47129 35.709322 9.47129 16.062795 0 32.125591-4.735645 44.604655-15.742819l480.091993-403.297753a55.547834 55.547834 0 0 0 19.646526-47.228458 61.243407 61.243407 0 0 0-32.12559-44.156688z"
-                fill="#93b5cf"></path>
-        </svg>
-                                        Tao Cheung‘s Blog &copy;Copyright
-                                            <script>
-                                                var date = new Date();
-                                                document.write("" + date.getFullYear());
-                                            </script>
-                                            | Powered by
-                                            <a href="TaoCheung.me" target="_blank">
-                                                TaoCheung.me
-                                            </a>
-            </div>
-            <div id="update" style="display:none;">
-                on
-            </div>
-            
-                <div id="version" style="display:none;">
-                    1.7.4
-                </div>
-                
-                    <script>
-                        var pat = '';
-                        
-                        document.write('<div id="home_path" style="display:none;">' + document.location.protocol + '//' + window.document.location.hostname + pat + '</div>')
-                    </script>
-        </footer>
-        
-                <script>
-                    
-                    
-                    
-                    hitokoto();
-                    
-                    getStar();
-                    hljs.initHighlighting();
-                    console.clear();
-                    
-                    CheckVersion();
-                    
-                    var newDate = new Date();
-                    newDate.setTime(1590557175462);
-                    console.log(" Blog Update Time: " + newDate.toLocaleDateString());
-                    console.log("\n %c \u26a1Theme:Chic Author's Blog:https://blog.itjoker.cn  Write By ITJoker  \n\n", "color: #ffffff; background: rgba(49, 49, 49, 0.85); padding:5px 0;border-radius:5px;");
-                </script>
-                
         </div>
-</body>
-
+    
+    <footer id="footer" class="">
+        <p class="published border-effect">
+          ©2020 共 17 篇文章
+          <br/>
+          Theme <a href="https://immmmm.com/gridea-theme-motify/" target="_blank">「Chic」</a> Powered by <a href="https://gridea.dev/" target="_blank">「Gridea」</a>
+        </p>
+    </footer>
+      
+    
+      <script src="https://iTb2b.github.io/media/js/jquery.min.js"></script>
+      <script type='text/javascript' src='https://iTb2b.github.io/media/js/Bmdb.min.js'></script>
+    
+    
+    <script>
+    new Bmdb({
+      type: 'books',
+      selector: '.post-content',
+      secret: 'lirAj0mUhds3tU6wGpNGQTFzW4P0PChoQiOUfJJ6uZqc7ZwEkS3EHiOj2nKAJv0Q',
+      noMoreText: '没有更多数据了',
+      limit: 30
+    })
+    </script>
+    
+    </div>
+  </body>
 </html>
